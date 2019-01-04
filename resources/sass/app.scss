@@ -1,0 +1,24 @@
+// resources/assets/sass/app.scss
+@import '~jquery-ui/themes/base/all.css';
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+// Variables
+@import 'variables';
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+.navbar-laravel {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.animated {
+    -webkit-transition: height 0.2s;
+    -moz-transition: height 0.2s;
+    transition: height 0.2s;
+}
+
+.stars {
+    margin: 20px 0;
+    font-size: 24px;
+    color: #d17581;
+}
