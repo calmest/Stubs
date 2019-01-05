@@ -127,7 +127,11 @@ class BuildStubController extends Controller
     }
 
     public function createOrder(Request $request){
-        return $request->all();
+        $data = $request->all();
+        $code = '896327';
+        
+        return response()->json($code);
+        //return $data;
     }
 
     public function stripeCharge(Request $request)

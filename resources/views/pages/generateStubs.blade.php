@@ -5,9 +5,11 @@
 
 <div id="content">
     
+<style>.space{padding: 10px;border-radius: none;margin:25px;}</style>
+
 <div class="row">
     <div class="col-sm-3 pull-right">
-        <a href="/modern" class="btn btn-primary btn-xs pull-right"><p>Back to old generator</p></a>
+        <a href="/modern" class="btn btn-primary btn-xs pull-right space"><p>Back to old generator</p></a>
     </div>
 </div>
 <h3 class="text-center">Real Check Stubs are delivered to your email for immediate download and printing. Watermarks are removed from purchased copies.</h3>
@@ -45,7 +47,7 @@
     <div class="loader-img"><img src="/images/loader.gif"></div>
     <p>Please wait</p>
 </div>
-<div  class="tmpl-show" style="display: block;">
+<div  class="tmpl-show" id="downloadMe" style="display: block;">
 {{csrf_field()}}
 
 </div>

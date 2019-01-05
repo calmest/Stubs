@@ -6,12 +6,12 @@ $(document).ready(function(){
         //activate loader rotate
         $('#loader_element').addClass('active');
         var tmpl = $(this).attr('data-tmpl'); // get tpl name from button.select-tmpl
-        console.log(tmpl);
+        //console.log(tmpl);
         var prewTmpl = $('input#selected_template').val();
-        console.log(prewTmpl);
+            //console.log(prewTmpl);
         if (prewTmpl.length === 0 || prewTmpl != tmpl) { //check if it's a fresh tmpl
             var divStep2 = $('.tmpl-show');
-        console.log(divStep2);
+            //console.log(divStep2);
             $('#carusel_preview').attr('data-tmpl', tmpl);
             //console.log($('#carusel_preview').attr('data-tmpl', tmpl));
             divStep2.hide().html('').attr('id', 'tmpl-' + tmpl);
@@ -54,7 +54,7 @@ $(document).ready(function(){
         $('.button-next').click(); //switch on next step
         var data1 = $('#stubsForm').serialize(); //get stubs data
        // var data2 = $('#agree_order_form').serialize(); // get email data
-
+       //console.log($('.tmpl-show').html());
       $.ajaxSetup({
           headers: {
               'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -70,7 +70,7 @@ $(document).ready(function(){
 
 
         }).done(function(response) {
-            console.log(response);
+            //console.log(response);
             $('#order_detail').html(response).show();
             $('#loader-4step').removeClass('active'); //deactivate loader rotate
         }).fail(function() {

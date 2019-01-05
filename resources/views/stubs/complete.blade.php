@@ -36,7 +36,8 @@
         <div class="row">
             <div class="col-md-8">
                 <form data-paypalpro="" class="form-horizontal" id="agree_order_form" action="/order/details" method="post"><div class="form-group"><label class="col-sm-3 control-label required" for="BillingForm_email">Email <span class="required">*</span></label><div class="col-sm-9"><input style="width:230px;" class="form-control" placeholder="Email" name="BillingForm[email]" id="BillingForm_email" type="email" maxlength="128" value=""><div class="help-block error" id="BillingForm_email_em_" style="display:none"></div><span class="help-block">Your check stubs will be sent to this address.</span></div></div><div class="form-group"><span class="col-sm-3"></span><div class="col-sm-9"><div class="checkbox"><input id="ytBillingForm_agree" type="hidden" value="0" name="BillingForm[agree]"><label><input name="BillingForm[agree]" id="BillingForm_agree" value="1" type="checkbox">I agree with <a href="/site/legal" title="Terms" target="_blank">the terms of service</a><span class="required">*</span></label></div><div class="help-block error" id="BillingForm_agree_em_" style="display:none"></div></div></div><button id="save_order_form" data-stripe="true" class="btn btn-success" name="yt0" type="button">Place Order</button>
-</form><button id="stripe_button" style="display:none;" class="btn btn-success" name="yt1" type="button">Complete Payment</button><script>
+</form>
+<button id="stripe_button" style="display:none;" class="btn btn-success" name="yt1" type="button">Complete Payment</button><script>
     var handler = StripeCheckout.configure({
         key: 'pk_test_ppSY5pMjs14nGhpg0RVNHJl4',
         image: '/images/tile-150x150.png',
@@ -80,7 +81,7 @@
         try {
             handler.open({
                 name: 'Real Paycheck Stubs',
-                amount: {{$template_total}},
+                amount: '899',
                 billingAddress: true,
                 email: agreeEmail
             });
@@ -104,23 +105,10 @@
         var data2 = $agreeForm.serialize();
         var email = $agreeForm.find('[name="BillingForm[email]"]').val().toLowerCase();
 
-        var $div = $('div#all_preset1');
-        var clon = $div.clone();
-
-        console.log(clon);
-
         $orderDetailDiv.find('.form-group').removeClass('has-error');
         $orderDetailDiv.find('.error').html('');
-
-        $.ajaxSetup({
-            headers: {
-                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-            }
-        });
-
-        
         $.ajax({
-            data: data1+'&'+data2+'&'+clon,
+            data: data1+'&'+data2,
             url: '/generateStubs/createOrder',
             type: 'POST'
         }).done(function(response) {
@@ -161,8 +149,7 @@
             </div>
         </div>
     </div>
-</div>
-<script type="text/javascript">
+</div><script type="text/javascript">
 /*<![CDATA[*/
 jQuery('#agree_order_form').yiiactiveform({'validateOnSubmit':true,'errorCssClass':'has-error','successCssClass':'has-success','inputContainer':'div.form-group','attributes':[{'id':'BillingForm_email','inputID':'BillingForm_email','errorID':'BillingForm_email_em_','model':'BillingForm','name':'email','enableAjaxValidation':false,'clientValidation':function(value, messages, attribute) {
 
