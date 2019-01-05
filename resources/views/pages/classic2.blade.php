@@ -1215,6 +1215,7 @@ runQuickModal();
 <div class="clearfix"></div>
 <input type="hidden" value="classic2" name="stubs[template]">
 <input type="hidden" value="" name="is_wizard">
+<<<<<<< HEAD
 </form><div class="modal fade" id="PreviewStubs" tabindex="-1" role="dialog" aria-labelledby="PreviewStubs">
 <div class="modal-dialog modal-lg" role="document">
 <div class="modal-content">
@@ -1241,6 +1242,11 @@ runQuickModal();
 </div>
 </div>
 </div><div class="clear"></div></div><!-- content -->
+=======
+</form>
+@include('partials.modal')
+</div><!-- content -->
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
   </div>
 
         </div>

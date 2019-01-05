@@ -26,13 +26,21 @@
                         </div>
                         <div class="row">
                             <div class="col-md-12">
+<<<<<<< HEAD
                                 <form>
+=======
+                               <form action="{{ route('UpdateEmployee')  }}" method="POST">
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
                                   <div class="form-group row">
                                     <label for="employeename" class="col-4 col-form-label">Employee Name*</label>
                                     <div class="col-8">
                                       <input id="employeename" name="employeename" placeholder="Type Employee Name Here" class="form-control here" required="required" type="text">
                                     </div>
                                   </div>
+<<<<<<< HEAD
+=======
+                                  {{csrf_field()}}
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
                                   <div class="form-group row">
                                         <label for="employeestreetaddress" class="col-4 col-form-label">Employee Street Address*</label>
                                         <div class="col-8">
@@ -79,7 +87,11 @@
                                     </div>
                                   <div class="form-group row">
                                     <div class="offset-4 col-8">
+<<<<<<< HEAD
                                       <button name="submit" type="submit" class="btn btn-primary btn-lg">Save</button>
+=======
+                                      <button  class="btn btn-primary btn-lg">Save</button>
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
                                     </div>
                                   </div>
                                 </form>

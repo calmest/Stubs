@@ -2,11 +2,21 @@
 
 namespace App\Http\Controllers;
 
+<<<<<<< HEAD
 use Illuminate\Http\Request;
 use Resources\Js\App;
 use File;
 use Illuminate\Contracts\Filesystem\FileNotFoundException;
 use App\Template;
+=======
+use App\Template;
+use App\User;
+use File;
+use Illuminate\Contracts\Filesystem\FileNotFoundException;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Resources\Js\App;
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
 
 class PagesController extends Controller
 {
@@ -42,6 +52,7 @@ class PagesController extends Controller
         return view('pages.legal');
     }
 
+<<<<<<< HEAD
     public function test() {
         return view('pages.test');
     }
@@ -54,6 +65,8 @@ class PagesController extends Controller
 
     }
 
+=======
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
     public function privacy() {
         return view('pages.privacy');
     }
@@ -63,9 +76,13 @@ class PagesController extends Controller
         return view('pages.support')->with('title', $title);
     }
 
+<<<<<<< HEAD
     public function profile() {
         return view('pages.profile');
     }
+=======
+    
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
 
     public function stubs() {
         return view('pages.stubs');
@@ -154,6 +171,7 @@ class PagesController extends Controller
         return view('pages.order');
     }
 
+<<<<<<< HEAD
     public function selecttpl() {
         //return view('generateStubs.selecttpl');
         /*$file = File::get('\resources\views\templates\template1.blade.php');
@@ -181,6 +199,24 @@ class PagesController extends Controller
         $response->header("Content-Type", $type);
 
             return $response;
+=======
+    public function generateTemplate() {
+        return view('pages.generateStubs');
+    }
+
+    public function selecttpl(Request $request) {
+
+        $name = $request->template;
+        //return $RqTpl;
+        $data = Template::where('template_name',$name)->first();
+        if ($data) {
+         return $data->template;           
+        }else{
+            return '';
+        }
+
+      
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
     }
 
     public function selectTemplate($id){

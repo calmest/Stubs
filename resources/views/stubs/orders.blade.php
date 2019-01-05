@@ -7,10 +7,17 @@
 
 @section('content')
 
+<<<<<<< HEAD
 <div class="header well" style="width: 100%;">
     <div class="container">
     <h1>Order Details</h1>
     </div>
+=======
+<div class="header well">
+<div class="container">
+<h1>Order Details</h1>
+</div>
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
 </div>
 
 <div class="container content-zone">

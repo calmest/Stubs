@@ -2,10 +2,18 @@
 
 namespace App\Http\Controllers;
 
+<<<<<<< HEAD
 use Illuminate\Http\Request;
 use Spatie\Browsershot\Browsershot;
 use App\Template;
 use App\MyStub;
+=======
+use App\MyStub;
+use App\Template;
+use Barryvdh\DomPDF\Facade as PDF;
+use Illuminate\Http\Request;
+use Spatie\Browsershot\Browsershot;
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
 
 class BuildStubController extends Controller
 {
@@ -19,6 +27,11 @@ class BuildStubController extends Controller
     	return view('stubs.index', compact('template'));
     }
 
+<<<<<<< HEAD
+=======
+    
+
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
     /*
     |---------------------------------------------
     | SHOW STUBS TEMPLATES
@@ -108,6 +121,7 @@ class BuildStubController extends Controller
     |---------------------------------------------
     */
     public function orderDetails(Request $request){
+<<<<<<< HEAD
         $template_name = $request->stubs['template'];
         $template_qty = $request->stubs['header']['stubsAmount'] + 1;
         $template_total = $template_qty * 8.99;
@@ -117,6 +131,29 @@ class BuildStubController extends Controller
 
     public function createOrder(Request $request){
         return $request->all();
+=======
+    $template_name = $request->stubs['template'];
+    $template_qty = $request->stubs['header']['stubsAmount'] + 1;
+    $template_total = $template_qty * 8.99;
+
+
+    $name = $request->template;
+        //return $RqTpl;
+        $data = Template::where('template_name','complete')->first();
+        if ($data) {
+          return view('stubs.complete', compact('template_name','template_qty','template_total'));;           
+        }else{
+            return '';
+        }
+    }
+
+    public function createOrder(Request $request){
+        $data = $request->all();
+        $code = '896327';
+        
+        return response()->json($code);
+        //return $data;
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
     }
 
     public function stripeCharge(Request $request)
@@ -128,6 +165,14 @@ class BuildStubController extends Controller
        // return $order_id;
     }
 
+<<<<<<< HEAD
+=======
+    public function preview()
+    {
+        return view('pages.preview');
+    }
+
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
     /*
     |---------------------------------------------
     | Generate order and redirect

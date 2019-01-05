@@ -1229,6 +1229,7 @@ runQuickModal();
 <div class="clearfix"></div>
 <input type="hidden" value="modern" name="stubs[template]"/>
 <input type="hidden" value="" name="is_wizard"/>
+<<<<<<< HEAD
 </form><div class="modal fade" id="PreviewStubs" tabindex="-1" role="dialog" aria-labelledby="PreviewStubs">
 <div class="modal-dialog modal-lg" role="document">
 <div class="modal-content">
@@ -1250,4 +1251,37 @@ runQuickModal();
     </div>
 
                 </div>
+=======
+</form>
+<div class="modal fade" id="PreviewStubs" tabindex="-1" role="dialog" aria-labelledby="PreviewStubs" aria-hidden="true" style="overflow-x: auto; display: none;">
+<div class="modal-dialog modal-lg" role="document" style="width: auto; max-width: 960px;">
+<div class="modal-content">
+<div class="modal-header">
+  <div style="float:left;margin: 0 0 10px 0;">
+    <div class="btn-group"><button data-dismiss="modal" aria-label="Close" class="btn btn-default" id="yw1" name="yt3" type="button">Back to edit</button><button onclick="$('#stubsForm').submit();" class="btn btn-primary" id="yw2" type="submit" name="yt4">Submit information</button></div>               </div>
+  <div style="float:right;margin: 0 0 10px 0;">
+    <div class="btn-group"><button data-dismiss="modal" aria-label="Close" class="btn btn-default" id="yw3" name="yt5" type="button">Back to edit</button><button onclick="$('#stubsForm').submit();" class="btn btn-primary" id="yw4" type="submit" name="yt6">Submit information</button></div>               </div>
+  <div class="clear"></div>
+</div>
+<div class="modal-body">
+  <div class="loader-line">
+    <div class="line"></div>
+  </div>
+  <div data-tmpl="modern2" id="carusel_preview" class="carousel slide">
+      <div class="carousel-inner"></div>
+    <a class="carousel-control left" href="#carusel_preview" data-slide="prev" style="display: none;">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a class="carousel-control right" href="#carusel_preview" data-slide="next" style="display: none;">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+
+</div>
+</div>
+</div>
+</div>
+</div><div class="clear"></div></div><!-- content -->
+  </div>
+</div>
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
 @endsection

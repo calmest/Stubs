@@ -3,11 +3,19 @@
 namespace App\Http\Controllers;
 
 use App\Order;
+<<<<<<< HEAD
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use DB;
 use PDF;
 use Auth;
+=======
+use Auth;
+use Barryvdh\DomPDF\Facade as PDF;
+use DB;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
 class OrderController extends Controller
 {
     /**
@@ -114,6 +122,7 @@ class OrderController extends Controller
         */
     }
 
+<<<<<<< HEAD
     public function mystubs()
     {
         $orders = Order::orderBy('order_purchased_at', 'desc')->paginate(10);
@@ -127,4 +136,15 @@ class OrderController extends Controller
     public function employee() {
         return view('profile.employee');
     }
+=======
+    public function convert()
+    {
+
+        $pdf = PDF::loadView('pages.preview');
+        return $pdf->download('invoice.pdf');
+         
+    }
+
+    
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
 }

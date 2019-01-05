@@ -1,11 +1,14 @@
 @extends('layouts.app')
 
 @section('content')
+<<<<<<< HEAD
 <div class="header well row">
     <div class="container">
         <h1>Post A Review</h1>
     </div>
 </div>
+=======
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
 </br></br>
 <div class="container">
         <div class="row">

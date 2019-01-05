@@ -11,6 +11,10 @@ Simply fill in your information in the blanks below, and INSTANTLY create your o
 The powerful paycheck calculator does all of the hard work and provides you with a link to download and print
 your paycheck stub(s) immediately after purchase. Watch the demo to see for
 yourself how simple it is to create your own <b>paycheck stub</b>(s).
+<<<<<<< HEAD
+=======
+  <button id="cmd" class="btn btn-success">generate PDF</button>
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
 </h3>
 </div>
 
@@ -19,6 +23,10 @@ yourself how simple it is to create your own <b>paycheck stub</b>(s).
 <h2>Watch Demo</h2>
 <div id="btn-modal-watch-demo">
   <img src="/images/thumbnail.jpg">
+<<<<<<< HEAD
+=======
+
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
 </div>
 <div aria-labelledby="modal-watch-demo" id="modal-watch-demo" class="modal fade"><div class="modal-dialog"><div class="modal-content">				<div class="modal-header">
     <a class="close" data-dismiss="modal" aria-label="Close">×</a>
@@ -819,7 +827,11 @@ $('#modal-watch-demo iframe').removeAttr('src');
                                               </td>
                   <td width="58%" class="center_head_stub">
                                                       <div class="require">
+<<<<<<< HEAD
                               <input id="companyName" type="text" class="addtext addtext2" name="stubs[header][companyName]" placeholder="Type Company Name Here" value="Type Company Name Here">
+=======
+                              <input id="companyName" type="text" class="addtext addtext2" name="stubs[header][companyName]" placeholder="{{ Auth::user()->name }}" value="{{ Auth::user()->name }}">
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
                           </div>
                           <div class="require">
                               <input id="companyAddress1" type="text" class="addtext addtext2" name="stubs[header][companyAddress1]" placeholder="Type Company Street Address Here" value="Type Company Street Address Here">
@@ -1577,11 +1589,32 @@ runQuickModalButton();
 runQuickModal();
 </script>
 
+<<<<<<< HEAD
+=======
+<script>
+var doc = new jsPDF();
+var specialElementHandlers = {
+    '#app': function (element, renderer) {
+        return true;
+    }
+};
+
+$('#cmd').click(function () {
+    doc.fromHTML($('#all_preset1').html(), 15, 15, {
+        'width': 170,
+            'elementHandlers': specialElementHandlers
+    });
+    doc.save('sample-file.pdf');
+});
+</script>
+
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
 
 <div class="clearfix"></div>
 <input type="hidden" value="modern2" name="stubs[template]">
 <input type="hidden" value="" name="is_wizard">
 </form>
+<<<<<<< HEAD
 
 <div class="modal fade" id="PreviewStubs" tabindex="-1" role="dialog" aria-labelledby="PreviewStubs" aria-hidden="true" style="overflow-x: auto; display: none;">
 <div class="modal-dialog modal-lg" role="document" style="width: auto; max-width: 960px;">
@@ -1611,6 +1644,9 @@ runQuickModal();
 </div>
 </div>
 </div><div class="clear"></div></div><!-- content -->
+=======
+@include('partials.modal')</div><!-- content -->
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
   </div>
 </div>
 @endsection

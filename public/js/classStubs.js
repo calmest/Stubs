@@ -1,7 +1,11 @@
 /*
  * @returns {Stubs}
  */
+<<<<<<< HEAD
 function Stubs() {
+=======
+function Stubs () {
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
     this.switchCal = true;
 
     this.dateFormat = 'MM-DD-YYYY';
@@ -22,6 +26,7 @@ function Stubs() {
     };
 
     this.templateBackgroundModern3 = {
+<<<<<<< HEAD
         'modern3_w.jpg': 'Default',
         'modern3_bg1_w.jpg': 'Template 1(+2.00)',
         'modern3_bg2_w.jpg': 'Template 2(+2.00)',
@@ -53,6 +58,39 @@ function Stubs() {
         'advanced5_bg4_w.jpg': 'Template 4(+2.00)'
     };
 
+=======
+        'modern3_w.jpg' : 'Default',
+        'modern3_bg1_w.jpg' : 'Template 1(+2.00)',
+        'modern3_bg2_w.jpg' : 'Template 2(+2.00)',
+        'modern3_bg3_w.jpg' : 'Template 3(+2.00)',
+        'modern3_bg4_w.jpg' : 'Template 4(+2.00)'
+    };
+
+    this.templateBackgroundModern2 = {
+        'modern2_w.jpg' : 'Default',
+        'modern2_bg1_w.jpg' : 'Template 1(+2.00)',
+        'modern2_bg2_w.jpg' : 'Template 2(+2.00)',
+        'modern2_bg3_w.jpg' : 'Template 3(+2.00)',
+        'modern2_bg4_w.jpg' : 'Template 3(+2.00)',
+    };
+
+    this.templateBackgroundAdvanced4 = {
+        'advanced4_w.jpg' : 'Default',
+        'advanced4_bg1_w.jpg' : 'Template 1(+2.00)',
+        'advanced4_bg2_w.jpg' : 'Template 2(+2.00)',
+        'advanced4_bg3_w.jpg' : 'Template 3(+2.00)',
+        'advanced4_bg4_w.jpg' : 'Template 4(+2.00)'
+    };
+
+    this.templateBackgroundAdvanced5 = {
+        'advanced5_w.jpg' : 'Default',
+        'advanced5_bg1_w.jpg' : 'Template 1(+2.00)',
+        'advanced5_bg2_w.jpg' : 'Template 2(+2.00)',
+        'advanced5_bg3_w.jpg' : 'Template 3(+2.00)',
+        'advanced5_bg4_w.jpg' : 'Template 4(+2.00)'
+    };
+    
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
 
     this.periodList = {
         'weekly': {
@@ -107,7 +145,11 @@ function Stubs() {
             'abbr': '',
             'tax': 0.00
         },
+<<<<<<< HEAD
         'federalTaxOptions': { 'subtract': '160.00', 'rate': '0.1' },
+=======
+        'federalTaxOptions': {'subtract': '160.00', 'rate': '0.1'},
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
         'marital': 'Single',
         'exemptions': 0,
         'contractor': 0,
@@ -163,7 +205,12 @@ function Stubs() {
             'hours': '40.00',
             'period': 0,
             'this': '0.00'
+<<<<<<< HEAD
         },
+=======
+        }
+        ,
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
         'customField4': {
             'rate': '0.00',
             'hours': '40.00',
@@ -507,7 +554,11 @@ function Stubs() {
     };
 
     this.additionStubsAdvance = {
+<<<<<<< HEAD
         'payytd': {
+=======
+        'payytd':{
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
             '1': '0.00',
             '2': '0.00',
             '3': '0.00',
@@ -704,7 +755,11 @@ function Stubs() {
         }
     };
 
+<<<<<<< HEAD
     this.currentTax = {
+=======
+    this.currentTax ={
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
         'deductionother': {
             'rate': '0.00',
             'period': 0,
@@ -843,8 +898,13 @@ function Stubs() {
         },
     };
 
+<<<<<<< HEAD
     this.getFederalTaxOptions = function() {
         var resultOptions = { 'subtract': '160.00', 'rate': '0.1' };
+=======
+    this.getFederalTaxOptions = function () {
+        var resultOptions = {'subtract': '160.00', 'rate': '0.1'};
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
         var taxesObj = new Taxes();
         var taxOptions = taxesObj.taxesList[this.current.period.key][this.current.marital][this.current.exemptions];
         for (var index in taxOptions) {
@@ -857,20 +917,33 @@ function Stubs() {
         this.current.federalTaxOptions = resultOptions;
     };
 
+<<<<<<< HEAD
     this.getPrewPaymentDate = function(inputDateF) {
         var inputDate = new Date(inputDateF);
         var prewPaymentDate = false;
         if (this.current.period && typeof this.current.period === 'object') {
             prewPaymentDate = moment(inputDate).subtract(this.current.period.number, this.current.period.string).format('L');
+=======
+    this.getPrewPaymentDate = function (inputDateF) {
+        var inputDate = new Date(inputDateF);
+        var prewPaymentDate = false;
+        if (this.current.period && typeof this.current.period === 'object') {
+            prewPaymentDate = moment(inputDate).subtract(this.current.period.number,this.current.period.string).format('L');
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
         }
         return prewPaymentDate;
     };
 
+<<<<<<< HEAD
     this.getPaymentDatePeriod = function(inputDateF) {
+=======
+    this.getPaymentDatePeriod = function (inputDateF) {
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
         var inputDate = new Date(inputDateF);
         var PaymentDatePeriod = false;
         if (this.current.period && typeof this.current.period === 'object') {
             if (this.current.period.key === 'weekly') {
+<<<<<<< HEAD
                 PaymentDatePeriod = moment(inputDate).subtract(6 + 2, 'days').format('L') + ' - ' + moment(inputDate).subtract(2, 'days').format('L');
             } else if (this.current.period.key === 'biweekly') {
                 PaymentDatePeriod = moment(inputDate).subtract(14 + 2, 'days').format('L') + ' - ' + moment(inputDate).subtract(3, 'days').format('L');
@@ -878,6 +951,15 @@ function Stubs() {
                 PaymentDatePeriod = moment(inputDate).subtract(1, 'month').subtract(2, 'days').format('L') + ' - ' + moment(inputDate).subtract(3, 'days').format('L');
             } else if (this.current.period.key === 'semimonthly') {
                 PaymentDatePeriod = moment(inputDate).subtract(15.5 + 2, 'days').format('L') + ' - ' + moment(inputDate).subtract(3, 'days').format('L');
+=======
+                PaymentDatePeriod = moment(inputDate).subtract(6+2, 'days').format('L') + ' - ' + moment(inputDate).subtract(2, 'days').format('L');
+            } else if (this.current.period.key === 'biweekly') {
+                PaymentDatePeriod = moment(inputDate).subtract(14+2, 'days').format('L') + ' - ' + moment(inputDate).subtract(3, 'days').format('L');
+            } else if (this.current.period.key === 'monthly') {
+                PaymentDatePeriod = moment(inputDate).subtract(1, 'month').subtract(2, 'days').format('L') + ' - ' + moment(inputDate).subtract(3, 'days').format('L');
+            } else if (this.current.period.key === 'semimonthly') {
+                PaymentDatePeriod = moment(inputDate).subtract(15.5+2, 'days').format('L') + ' - ' + moment(inputDate).subtract(3, 'days').format('L');
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
             } else if (this.current.period.key === 'annually') {
                 PaymentDatePeriod = moment(inputDate).subtract(1, 'year').format('L') + ' - ' + moment(inputDate).subtract(3, 'days').format('L');
             }
@@ -894,34 +976,61 @@ function Stubs() {
     this.calculate();
 }
 
+<<<<<<< HEAD
 Stubs.prototype.advanceInit = function() {
     if ($('#overtimerate').length > 0) {
         this.advanced = true;
         for (var i = 1; i <= this.maxStubsAmount; i++) {
             this.additionStubs.payhours[i] = this.round(this.additionStubs.payhours[i]);
+=======
+Stubs.prototype.advanceInit = function () {
+    if ($('#overtimerate').length > 0) {
+        this.advanced = true;
+        for (var i = 1; i <= this.maxStubsAmount; i++) {
+            this.additionStubs.payhours[i]  = this.round(this.additionStubs.payhours[i]);
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
         }
     }
 };
 
+<<<<<<< HEAD
 Stubs.prototype.inputTextPattern = function(idElement, valElement) {
     var pattern = /^[0-9][0-9]*\.{0,1}[0-9]{0,2}/g;
     valElement = pattern.exec(valElement);
     if (valElement === null) {
+=======
+Stubs.prototype.inputTextPattern = function (idElement, valElement) {
+    var pattern = /^[0-9][0-9]*\.{0,1}[0-9]{0,2}/g;
+    valElement = pattern.exec(valElement);
+    if ( valElement === null) {
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
         valElement = 0;
     } else {
         valElement = valElement[0] || 0;
     }
+<<<<<<< HEAD
     if (valElement !== 0) {
+=======
+    if(valElement !== 0) {
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
         $('#' + idElement).val(valElement);
     }
     return valElement;
 };
 
+<<<<<<< HEAD
 Stubs.prototype.round = function(value) {
     return (Math.round((Number(value)) * 100) / 100).toFixed(2);
 };
 
 Stubs.prototype.addDefaultInfoText = function() {
+=======
+Stubs.prototype.round = function (value) {
+    return (Math.round((Number(value))*100)/100).toFixed(2);
+};
+
+Stubs.prototype.addDefaultInfoText = function () {
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
     $('#stubNumber').val(this.additionStubs.stubNumber[1]);
     if ($('#payrate').val().length != 0) {
         if (this.round($('#payrate').val())) {
@@ -931,17 +1040,29 @@ Stubs.prototype.addDefaultInfoText = function() {
     if ($('#paymentPeriod').val() !== 'weekly') {
         this.updatePaymentPeriod($('#paymentPeriod').val());
     }
+<<<<<<< HEAD
     $('.addtext').each(function() {
         var placeholder = $(this).attr('placeholder');
         $(this).attr('data-val', placeholder);
     });
     $('.ext_div').each(function() {
+=======
+    $('.addtext').each(function () {
+        var placeholder = $(this).attr('placeholder');
+        $(this).attr('data-val', placeholder);
+    });
+    $('.ext_div').each(function () {
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
         $(this).attr('data-old', $(this).text());
     });
 };
 
 //Select
+<<<<<<< HEAD
 Stubs.prototype.state = function() {
+=======
+Stubs.prototype.state = function () {
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
     var resultStates = {};
     var stateObj = new States();
     for (var i in stateObj.stateList) {
@@ -950,7 +1071,11 @@ Stubs.prototype.state = function() {
     return resultStates;
 };
 
+<<<<<<< HEAD
 Stubs.prototype.paymentPeriod = function() {
+=======
+Stubs.prototype.paymentPeriod = function () {
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
     var resultPeriod = {};
     for (var i in this.periodList) {
         resultPeriod[i] = this.periodList[i].name;
@@ -958,7 +1083,11 @@ Stubs.prototype.paymentPeriod = function() {
     return resultPeriod;
 };
 
+<<<<<<< HEAD
 Stubs.prototype.stubsAmount = function() {
+=======
+Stubs.prototype.stubsAmount = function () {
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
     var resultStubsAmount = [];
     for (var i = 1; i <= this.maxStubsAmount; i++) {
         resultStubsAmount.push(i);
@@ -966,7 +1095,11 @@ Stubs.prototype.stubsAmount = function() {
     return resultStubsAmount;
 };
 
+<<<<<<< HEAD
 Stubs.prototype.exemptions = function() {
+=======
+Stubs.prototype.exemptions = function () {
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
     var resultExemptions = [];
     for (var i = 0; i <= this.exemptionsAmount; i++) {
         resultExemptions.push(i);
@@ -974,6 +1107,7 @@ Stubs.prototype.exemptions = function() {
     return resultExemptions;
 };
 
+<<<<<<< HEAD
 Stubs.prototype.switchCalcul = function() {
     return {
         'on': 'Auto-Calculator ON',
@@ -982,6 +1116,16 @@ Stubs.prototype.switchCalcul = function() {
 };
 
 Stubs.prototype.paymentPeriodAmounts = function() {
+=======
+Stubs.prototype.switchCalcul = function () {
+    return {
+        'on' : 'Auto-Calculator ON',
+        'off' : 'Turn OFF Auto-Calculator'
+    };
+};
+
+Stubs.prototype.paymentPeriodAmounts = function () {
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
     var resultPeriodAmounts = [];
     resultPeriodAmounts.push('');
     for (var i = 1, len = this.current.period.amount; i <= len; i++) {
@@ -990,11 +1134,19 @@ Stubs.prototype.paymentPeriodAmounts = function() {
     return resultPeriodAmounts;
 };
 
+<<<<<<< HEAD
 Stubs.prototype.generateSelect = function(id) {
     var _this = this;
     var id = id ? '#' + id : '';
 
     $('select' + id).each(function() {
+=======
+Stubs.prototype.generateSelect = function (id) {
+    var _this = this;
+    var id = id ? '#' + id : '';
+
+    $('select' + id).each(function () {
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
         var $select = $(this);
         var id = $select.attr('id');
 
@@ -1022,7 +1174,11 @@ Stubs.prototype.generateSelect = function(id) {
         var template = $('input[name="stubs[template]"]').val();
 
         for (var i in options) {
+<<<<<<< HEAD
             var option = $("<option>", { value: i, html: options[i] });
+=======
+            var option = $("<option>", { value: i, html: options[i]});
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
             if (i === selected) {
                 option.attr('selected', true);
             }
@@ -1032,9 +1188,15 @@ Stubs.prototype.generateSelect = function(id) {
     });
 };
 
+<<<<<<< HEAD
 Stubs.prototype.generatePeriodSelect = function() {
     var options = this.paymentPeriodAmounts();
     $('select.period, select.period2').each(function() {
+=======
+Stubs.prototype.generatePeriodSelect = function () {
+    var options = this.paymentPeriodAmounts();
+    $('select.period, select.period2').each(function () {
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
         var $selectCopy = $(this);
         $selectCopy.html('');
         for (var i in options) {
@@ -1044,13 +1206,18 @@ Stubs.prototype.generatePeriodSelect = function() {
 };
 //Select
 
+<<<<<<< HEAD
 Stubs.prototype.toggleStateTaxes = function() {
+=======
+Stubs.prototype.toggleStateTaxes = function () {
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
     var _this = this;
     var labelState = _this.current.state.abbr + ' State Tax';
     $('#stateAbbrId').text(labelState);
     $('#abbrState').val(labelState);
     if (_this.current.state.tax === 0) {
         $('.state_tr').addClass('state_tr_hide');
+<<<<<<< HEAD
         $('.state_tr_hide input').each(function() {
             $(this).attr('disabled', 'disabled');
         });
@@ -1068,12 +1235,35 @@ Stubs.prototype.toggleStateTaxes = function() {
     } else {
         $('.casdi_tr').addClass('casdi_tr_hide');
         $('.casdi_tr input').each(function() {
+=======
+        $('.state_tr_hide input').each(function (){
+            $(this).attr('disabled','disabled');
+        });
+    } else {
+        $('.state_tr').removeClass('state_tr_hide');
+        $('.state_tr input').each(function (){
+            $(this).removeAttr('disabled');
+        });
+    }
+    if(_this.current.state.abbr === 'CA') {
+        $('.casdi_tr').removeClass('casdi_tr_hide');
+        $('.casdi_tr_hide input').each(function (){
+            $(this).attr('disabled','disabled');
+        });
+    } else {
+        $('.casdi_tr').addClass('casdi_tr_hide');
+        $('.casdi_tr input').each(function (){
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
             $(this).removeAttr('disabled');
         });
     }
 };
 
+<<<<<<< HEAD
 Stubs.prototype.toggleExtendForm = function(toggle) {
+=======
+Stubs.prototype.toggleExtendForm = function (toggle) {
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
     $('#extended').val(this.additionStubs.extended[1]);
     if (toggle) {
         $('#temp').removeClass('temp_easy').addClass('temp_ext');
@@ -1094,8 +1284,13 @@ Stubs.prototype.toggleExtendForm = function(toggle) {
  * - update all PaymentDate (expect [1]) and all PaymentPeriod
  * - update all PayHours
  * - if paymentType Salary - update Annual and Paythis
+<<<<<<< HEAD
  */
 Stubs.prototype.updatePaymentPeriod = function(period) {
+=======
+  */
+Stubs.prototype.updatePaymentPeriod = function (period) {
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
     var oldPeriod = this.current.period;
     this.current.period = this.periodList[period];
     this.generateSelect('paymentPeriodAmounts');
@@ -1119,7 +1314,11 @@ Stubs.prototype.updatePaymentPeriod = function(period) {
  * - update this.current.state
  * - toggle State field if tax == 0 or state = california
  */
+<<<<<<< HEAD
 Stubs.prototype.updateState = function(state) {
+=======
+Stubs.prototype.updateState = function (state) {
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
     var stateObj = new States();
     this.current.state = stateObj.stateList[state];
     this.toggleStateTaxes();
@@ -1130,7 +1329,11 @@ Stubs.prototype.updateState = function(state) {
  * @param string status
  * - update this.current.marital
  */
+<<<<<<< HEAD
 Stubs.prototype.updateMaritalStatus = function(status) {
+=======
+Stubs.prototype.updateMaritalStatus = function (status) {
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
     this.current.marital = this.maritalStatus[status];
 };
 
@@ -1139,7 +1342,11 @@ Stubs.prototype.updateMaritalStatus = function(status) {
  * @param string val
  * - update this.current.exemptions
  */
+<<<<<<< HEAD
 Stubs.prototype.updateExemptions = function(val) {
+=======
+Stubs.prototype.updateExemptions = function (val) {
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
     this.current.exemptions = val;
 };
 
@@ -1150,7 +1357,11 @@ Stubs.prototype.updateExemptions = function(val) {
  * - generate periodAmount in main stub if(val > 0) periodAmount = defperiodAmount
  * - generate periodAmount in default stub
  */
+<<<<<<< HEAD
 Stubs.prototype.updatePaymentPeriodAmount = function(val) {
+=======
+Stubs.prototype.updatePaymentPeriodAmount = function (val) {
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
     if (val || val === 0) {
         this.paymentPeriodAmount = val;
     }
@@ -1182,7 +1393,11 @@ Stubs.prototype.updatePaymentPeriodAmount = function(val) {
  * - update this.current.contractor
  * - change Employee <-> Contractor
  */
+<<<<<<< HEAD
 Stubs.prototype.updateContractorStatus = function() {
+=======
+Stubs.prototype.updateContractorStatus = function () {
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
     if (this.current.contractor === 0) {
         this.current.contractor = 1;
         $('.employee_word').text('Contractor');
@@ -1199,7 +1414,11 @@ Stubs.prototype.updateContractorStatus = function() {
  * - show or hide extend form toggleExtendForm()
  * - update information in extend form
  */
+<<<<<<< HEAD
 Stubs.prototype.updateExtendedStatus = function(stubNumb) {
+=======
+Stubs.prototype.updateExtendedStatus = function (stubNumb) {
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
     stubNumb = stubNumb || 1;
     var showExtendForm = false;
     if (this.additionStubs.extended[stubNumb] === 0) {
@@ -1215,6 +1434,7 @@ Stubs.prototype.updateExtendedStatus = function(stubNumb) {
     this.updateExtendedInfo();
 };
 
+<<<<<<< HEAD
 Stubs.prototype.updateExtendedInfo = function(elementId) {
     elementId = elementId || false;
     if (elementId) {
@@ -1223,6 +1443,16 @@ Stubs.prototype.updateExtendedInfo = function(elementId) {
         var $ext_el2 = $('#ext2' + elementId);
         var $ext_el3 = $('#ext3' + elementId);
         var $ext_el4 = $('#ext4' + elementId);
+=======
+Stubs.prototype.updateExtendedInfo = function (elementId) {
+    elementId = elementId || false;
+    if (elementId) {
+        var $el = $('#'+elementId);
+        var $ext_el = $('#ext'+elementId);
+        var $ext_el2 = $('#ext2'+elementId);
+        var $ext_el3 = $('#ext3'+elementId);
+        var $ext_el4 = $('#ext4'+elementId);
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
         if ($el.val()) {
             $ext_el.text($el.val());
             $ext_el2.text($el.val());
@@ -1238,7 +1468,11 @@ Stubs.prototype.updateExtendedInfo = function(elementId) {
     var netpay = (this.round(this.additionStubs.netpay[1])).split('.');
     $('#extdollars').html(netpay[0]);
     $('#extcents').html(netpay[1]);
+<<<<<<< HEAD
     if ($('#extdollars2')) {
+=======
+    if($('#extdollars2')){
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
         $('#extdollars2').html(netpay[0]);
         $('#extcents2').html(netpay[1]);
     }
@@ -1250,7 +1484,11 @@ Stubs.prototype.updateExtendedInfo = function(elementId) {
  * - update this.current.type
  * - call method generateAmountInputSet
  */
+<<<<<<< HEAD
 Stubs.prototype.updatePaymentTypes = function(type) {
+=======
+Stubs.prototype.updatePaymentTypes = function (type) {
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
     this.current.type = type;
     var event = 'change';
     this.generateAmountInputSet(event);
@@ -1264,13 +1502,21 @@ Stubs.prototype.updatePaymentTypes = function(type) {
  * - update stub Number
  * - update payment date
  */
+<<<<<<< HEAD
 Stubs.prototype.updateStubsAmount = function(amount) {
+=======
+Stubs.prototype.updateStubsAmount = function (amount) {
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
     this.current.stubsAmount = Number(amount) + 1;
     for (var i = 2; i <= this.maxStubsAmount; i++) {
         if (i <= this.current.stubsAmount) {
             $('#stub' + i).show().find('input').removeAttr('disabled');
         } else {
+<<<<<<< HEAD
             $('#stub' + i).hide().find('input').attr('disabled', 'disabled');
+=======
+            $('#stub' + i).hide().find('input').attr('disabled','disabled');
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
             this.additionStubs.payhours[i] = 40;
             if (this.advanced) {
                 this.additionStubs.payhours[i] = this.round(this.additionStubs.payhours[i]);
@@ -1291,7 +1537,11 @@ Stubs.prototype.updateStubsAmount = function(amount) {
  * - update this.additionStubs.stubNumber[1]
  * - update all stubs Number
  */
+<<<<<<< HEAD
 Stubs.prototype.updateStubNumbers = function(number) {
+=======
+Stubs.prototype.updateStubNumbers = function (number) {
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
     if (number) {
         this.additionStubs.stubNumber[1] = number;
         $('#stubNumber').val(this.additionStubs.stubNumber[1]);
@@ -1308,7 +1558,11 @@ Stubs.prototype.updateStubNumbers = function(number) {
  * - update this.additionStubs.paymentDate[1]
  * - update all payment Date
  */
+<<<<<<< HEAD
 Stubs.prototype.updatePaymentDate = function(date) {
+=======
+Stubs.prototype.updatePaymentDate = function (date) {
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
     if (date) {
         var pattern = /^\d{2}\/\d{2}\/\d{4}/;
         var dateArray = pattern.exec(date);
@@ -1330,7 +1584,11 @@ Stubs.prototype.updatePaymentDate = function(date) {
  * Method found periodAmount for main stubs (use payment date)
  * return integer (ex: if (weekly) 1...52)
  */
+<<<<<<< HEAD
 Stubs.prototype.generatePaymentPeriodAmount = function() {
+=======
+Stubs.prototype.generatePaymentPeriodAmount = function () {
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
     var paymentDate = new Date(this.additionStubs.paymentDate[1]);
     var resultPeriodAmount = 0;
     var firstDayInWeek = moment(paymentDate).dayOfYear(1).weekday();
@@ -1339,7 +1597,11 @@ Stubs.prototype.generatePaymentPeriodAmount = function() {
     } else if (this.current.period.key == 'weekly') {
         resultPeriodAmount = moment(paymentDate).subtract(firstDayInWeek, 'day').week();
     } else if (this.current.period.key == 'biweekly') {
+<<<<<<< HEAD
         resultPeriodAmount = Math.ceil((moment(paymentDate).subtract(firstDayInWeek, 'day').week()) / 2);
+=======
+        resultPeriodAmount = Math.ceil((moment(paymentDate).subtract(firstDayInWeek, 'day').week())/2);
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
     } else if (this.current.period.key == 'monthly') {
         resultPeriodAmount = moment(paymentDate).month() + 1;
     } else if (this.current.period.key == 'semimonthly') {
@@ -1356,7 +1618,11 @@ Stubs.prototype.generatePaymentPeriodAmount = function() {
  * @param string index - number stub
  * return integer (ex: if (weekly) 1...52)
  */
+<<<<<<< HEAD
 Stubs.prototype.generateDefPaymentPeriodAmount = function(index) {
+=======
+Stubs.prototype.generateDefPaymentPeriodAmount = function (index) {
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
     index = index || false;
     var resultPeriodAmount;
     if (this.current.period.key == 'annually') {
@@ -1379,32 +1645,53 @@ Stubs.prototype.generateDefPaymentPeriodAmount = function(index) {
  * and calculate #payrate if was changed payment type
  * @param string event
  */
+<<<<<<< HEAD
 Stubs.prototype.generateAmountInputSet = function(event) {
+=======
+Stubs.prototype.generateAmountInputSet = function (event) {
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
     event = event || false;
     var $annualPayment = $('#annualPayment');
     var type = this.current.type || false;
 
     if (type === 'hourly') {
+<<<<<<< HEAD
         if (window.location.pathname != '/requests/editstub') {
             $('.payhours').show();
         } else {
+=======
+        if(window.location.pathname != '/requests/editstub') {
+            $('.payhours').show();
+        }else{
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
             $('.payhours').show().attr('readonly', true);
         }
         $annualPayment.hide().find('input').attr('disabled', 'disabled');
         if (event === 'change') {
             this.calculatePayRate();
         }
+<<<<<<< HEAD
         if (window.location.pathname != '/requests/editstub') {
+=======
+        if(window.location.pathname != '/requests/editstub') {
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
             $('#payrate').attr('readonly', false);
         }
     } else {
         $('.payhours').hide();
         $('#payrate').attr('readonly', true);
         this.current.payrate = 'Salary';
+<<<<<<< HEAD
         if (window.location.pathname != '/requests/editstub') {
             $annualPayment.show().find('input').removeAttr('disabled');
         } else {
             $annualPayment.show().find('input').removeAttr('disabled').attr('readonly', 'readonly');
+=======
+        if(window.location.pathname != '/requests/editstub') {
+            $annualPayment.show().find('input').removeAttr('disabled');
+        }else{
+            $annualPayment.show().find('input').removeAttr('disabled').attr('readonly','readonly');
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
         }
     }
 };
@@ -1415,7 +1702,11 @@ Stubs.prototype.generateAmountInputSet = function(event) {
  * @param object oldPeriod - prew payment period obj
  * - update this.current.annual
  */
+<<<<<<< HEAD
 Stubs.prototype.calculateAnnualPayment = function(oldPeriod) {
+=======
+Stubs.prototype.calculateAnnualPayment = function (oldPeriod) {
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
     if (oldPeriod) { /*when update payment period at the selected Salary*/
         //this.current.annual = this.round((Number(this.current.annual)/oldPeriod.hourMultiplier) * Number(this.current.period.hourMultiplier));
     } else { /*when change paythis at the selected Salary or select Salary*/
@@ -1429,7 +1720,11 @@ Stubs.prototype.calculateAnnualPayment = function(oldPeriod) {
  * if change paythis - not update his
  * - update paythis[i] in all stubs paythis
  */
+<<<<<<< HEAD
 Stubs.prototype.calculatePayThis = function(idRefreshField) {
+=======
+Stubs.prototype.calculatePayThis = function (idRefreshField) {
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
     idRefreshField = idRefreshField || '';
     var i = 1;
     if (idRefreshField === 'paythis') {
@@ -1444,10 +1739,17 @@ Stubs.prototype.calculatePayThis = function(idRefreshField) {
         } else {
             if (i === 1) {
                 if (this.switchCal) {
+<<<<<<< HEAD
                     if (window.location.pathname != '/requests/editstub') {
                         $('input#paythis').attr('readonly', false).removeClass('readonly');
                     } else {
                         $('input#paythis').attr('readonly', false).attr('readonly', 'readonly');
+=======
+                    if(window.location.pathname != '/requests/editstub') {
+                        $('input#paythis').attr('readonly', false).removeClass('readonly');
+                    }else{
+                        $('input#paythis').attr('readonly', false).attr('readonly','readonly');
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
                     }
                 }
                 this.additionStubs.paythis[i] = this.round(Number(this.current.annual) / this.current.period.amount);
@@ -1471,7 +1773,11 @@ Stubs.prototype.calculatePayThis = function(idRefreshField) {
  * if change paythis - not update his
  * - update paythis[i] in all stubs paythis
  */
+<<<<<<< HEAD
 Stubs.prototype.calculatePayRate = function() {
+=======
+Stubs.prototype.calculatePayRate = function () {
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
     if (this.additionStubs.payhours[1]) {
         this.current.payrate = this.round(Number(this.additionStubs.paythis[1]) / this.additionStubs.payhours[1]);
     } else {
@@ -1479,11 +1785,19 @@ Stubs.prototype.calculatePayRate = function() {
     }
 };
 
+<<<<<<< HEAD
 Stubs.prototype.offCalculate = function(event, idRefreshField) {
     idRefreshField = idRefreshField || '';
     if (idRefreshField !== 'annual') {
         if ((event === 'change' || event === 'input')) {
             if (idRefreshField != 'payhours' /*&& idRefreshField != 'paythis'*/ ) {
+=======
+Stubs.prototype.offCalculate = function (event, idRefreshField) {
+    idRefreshField = idRefreshField || '';
+    if (idRefreshField !== 'annual') {
+        if ((event === 'change' || event === 'input')) {
+            if (idRefreshField != 'payhours' /*&& idRefreshField != 'paythis'*/) {
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
                 if (typeof this.additionStubs[idRefreshField] !== 'undefined') {
                     this.additionStubs[idRefreshField]['def'] = this.additionStubs[idRefreshField][1];
                     for (var i = 2; i <= this.current.stubsAmount; i++) {
@@ -1554,7 +1868,11 @@ Stubs.prototype.offCalculate = function(event, idRefreshField) {
     this.refreshFields();
 };
 
+<<<<<<< HEAD
 Stubs.prototype.onCalculate = function(event, idRefreshField) {
+=======
+Stubs.prototype.onCalculate = function (event, idRefreshField) {
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
     idRefreshField = idRefreshField || '';
     this.calculateTotal();
     this.calculateTotalHoursWorked();
@@ -1578,7 +1896,11 @@ Stubs.prototype.onCalculate = function(event, idRefreshField) {
     }
 };
 
+<<<<<<< HEAD
 Stubs.prototype.calculate = function(event, idRefreshField) {
+=======
+Stubs.prototype.calculate = function (event, idRefreshField) {
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
     idRefreshField = idRefreshField || '';
     if (this.current.stubsAmount > 1) {
         this.additionStubs.payhours.def = this.additionStubs.payhours[this.current.stubsAmount];
@@ -1601,10 +1923,17 @@ Stubs.prototype.calculate = function(event, idRefreshField) {
     }
 };
 
+<<<<<<< HEAD
 Stubs.prototype.calculateTotalHoursWorked = function() {
     var template = $('input[name="stubs[template]"]').val();
     var totalHours = 0;
     if (template == 'advanced4') {
+=======
+Stubs.prototype.calculateTotalHoursWorked = function () {
+    var template = $('input[name="stubs[template]"]').val();
+    var totalHours = 0;
+    if(template == 'advanced4') {
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
 
         for (var aField in this.currentAdvance) {
             if (aField !== 'vacation') {
@@ -1626,6 +1955,7 @@ Stubs.prototype.calculateTotalHoursWorked = function() {
 };
 
 
+<<<<<<< HEAD
 Stubs.prototype.calculateTotalDeduction2 = function(index) {
     var template = $('input[name="stubs[template]"]').val();
     var total = '0.00';
@@ -1633,16 +1963,30 @@ Stubs.prototype.calculateTotalDeduction2 = function(index) {
         var total = this.round(Number(this.currentTaxAdvance.deductioncustom1.rate) + Number(this.currentTaxAdvance.deductioncustom2.rate));
         this.additionStubsAdvance.deductiontotal[index] = total;
         if (template == 'advanced4') {
+=======
+Stubs.prototype.calculateTotalDeduction2 = function (index) {
+    var template = $('input[name="stubs[template]"]').val();
+    var total = '0.00';
+    if(template == 'advanced4' || template == 'advanced5') {
+        var total = this.round(Number(this.currentTaxAdvance.deductioncustom1.rate) + Number(this.currentTaxAdvance.deductioncustom2.rate));
+        this.additionStubsAdvance.deductiontotal[index] = total;
+        if(template == 'advanced4'){
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
             document.getElementById('this_deductiontotal').value = total;
         }
     }
 };
 
+<<<<<<< HEAD
 Stubs.prototype.calculateTotal = function() {
+=======
+Stubs.prototype.calculateTotal = function () {
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
     var total = 0;
     var template = $('input[name="stubs[template]"]').val();
     if (this.advanced) {
         for (var aField in this.currentAdvance) {
+<<<<<<< HEAD
             if (
                 template !== 'advanced4' && template !== 'advanced5' && template !== 'advanced6' ||
                 template === 'advanced4' && aField !== 'vacation' ||
@@ -1653,6 +1997,21 @@ Stubs.prototype.calculateTotal = function() {
                 this.currentAdvance[aField].this = this.round(Number(this.currentAdvance[aField].rate) * Number(this.currentAdvance[aField].hours));
                 total = Number(total) + Number(this.currentAdvance[aField].this);
             }
+=======
+             if (
+                 template !== 'advanced4' && template !== 'advanced5' && template !== 'advanced6'
+                 ||
+                 template === 'advanced4'  && aField !== 'vacation'
+                 ||
+                 template === 'advanced5'  && aField !== 'vacation' && aField !== 'overtime'
+                 ||
+                 template === 'advanced6'  && aField !== 'overtime'
+             ){
+
+                this.currentAdvance[aField].this = this.round(Number(this.currentAdvance[aField].rate) * Number(this.currentAdvance[aField].hours));
+                total = Number(total) + Number(this.currentAdvance[aField].this);
+             }
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
         }
     }
     if (this.current.stubsAmount > 1) {
@@ -1663,7 +2022,11 @@ Stubs.prototype.calculateTotal = function() {
     }
 };
 
+<<<<<<< HEAD
 Stubs.prototype.calculateDeductions = function(index) {
+=======
+Stubs.prototype.calculateDeductions = function (index) {
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
     this.additionStubs.ficafedtax[index] = this.round(0);
     this.additionStubs.ficamedtax[index] = this.round(0);
     this.additionStubs.ficasstax[index] = this.round(0);
@@ -1679,13 +2042,20 @@ Stubs.prototype.calculateDeductions = function(index) {
         this.additionStubs.ficamedtax[index] = this.round(this.additionStubs.total[index] * 0.0145);
         this.additionStubs.ficasstax[index] = this.round(this.additionStubs.total[index] * 0.062);
         this.additionStubs.sttax[index] = this.round(this.additionStubs.total[index] * this.current.state.tax);
+<<<<<<< HEAD
         if (this.current.state.abbr === 'CA') {
             this.additionStubs.casditax[index] = this.round(this.additionStubs.total[index] * 0.009);
             if (this.additionStubs.casditax[index] > 939.40) {
+=======
+        if(this.current.state.abbr === 'CA') {
+            this.additionStubs.casditax[index] = this.round(this.additionStubs.total[index] * 0.009);
+            if(this.additionStubs.casditax[index] > 939.40) {
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
                 this.additionStubs.casditax[index] = this.round(939.40);
             }
         }
 
+<<<<<<< HEAD
         this.additionStubs.deductions[index] = this.round(Number(this.additionStubs.ficamedtax[index]) +
             Number(this.additionStubs.ficasstax[index]) +
             Number(this.additionStubs.ficafedtax[index]) +
@@ -1696,16 +2066,37 @@ Stubs.prototype.calculateDeductions = function(index) {
             Number(this.currentTaxAdvance.childsup.rate) +
             Number(this.currentTaxAdvance.optional.rate) +
             Number(this.currentTax.deductionother.rate)
+=======
+        this.additionStubs.deductions[index] = this.round(Number(this.additionStubs.ficamedtax[index])
+            + Number(this.additionStubs.ficasstax[index])
+            + Number(this.additionStubs.ficafedtax[index])
+            + Number(this.additionStubs.sttax[index])
+            + Number(this.additionStubs.casditax[index])
+            + Number(this.currentTaxAdvance.medical.rate)
+            + Number(this.currentTaxAdvance.retire.rate)
+            + Number(this.currentTaxAdvance.childsup.rate)
+            + Number(this.currentTaxAdvance.optional.rate)
+            + Number(this.currentTax.deductionother.rate)
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
         );
     }
 };
 
+<<<<<<< HEAD
 Stubs.prototype.calculateNetpay = function(index) {
     var template = $('input[name="stubs[template]"]').val();
     if (this.current.contractor === 0) {
         if (template == 'advanced4' || template == 'advanced5') {
             this.additionStubs.netpay[index] = this.round(Number(this.additionStubs.total[index]) - (Number(this.additionStubs.deductions[index]) + Number(this.additionStubsAdvance.deductiontotal[index])))
         } else {
+=======
+Stubs.prototype.calculateNetpay = function (index) {
+    var template = $('input[name="stubs[template]"]').val();
+    if (this.current.contractor === 0) {
+        if(template == 'advanced4' || template == 'advanced5') {
+            this.additionStubs.netpay[index] = this.round(Number(this.additionStubs.total[index]) - (Number(this.additionStubs.deductions[index]) + Number(this.additionStubsAdvance.deductiontotal[index])))
+        }else {
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
             this.additionStubs.netpay[index] = this.round(Number(this.additionStubs.total[index]) - Number(this.additionStubs.deductions[index]));
         }
     } else {
@@ -1713,7 +2104,11 @@ Stubs.prototype.calculateNetpay = function(index) {
     }
 };
 
+<<<<<<< HEAD
 Stubs.prototype.calculateYTD = function() {
+=======
+Stubs.prototype.calculateYTD = function () {
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
     if (this.current.stubsAmount === 1) {
         this.calculateYTDTotal(1);
     } else {
@@ -1756,7 +2151,11 @@ Stubs.prototype.calculateYTD = function() {
     }
 };
 
+<<<<<<< HEAD
 Stubs.prototype.countPeriodAmount = function(index) {
+=======
+Stubs.prototype.countPeriodAmount = function (index) {
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
     var periodAmount = 0;
     if (this.current.stubsAmount === 1) {
         periodAmount = this.current.periodAmount;
@@ -1766,7 +2165,11 @@ Stubs.prototype.countPeriodAmount = function(index) {
     return periodAmount;
 };
 
+<<<<<<< HEAD
 Stubs.prototype.countValueForYtdTotal = function(index, period) {
+=======
+Stubs.prototype.countValueForYtdTotal = function (index, period) {
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
     if (this.advanced) {
         this.additionStubsAdvance.payytd[index] = this.round(Number(this.additionStubs.paythis[index]) * Number(period));
         var periodYtd;
@@ -1777,6 +2180,7 @@ Stubs.prototype.countValueForYtdTotal = function(index, period) {
             }
             this.additionStubsAdvance[aField + 'ytd'][index] = this.round(Number(this.currentAdvance[aField].this) * Number(periodYtd));
         }
+<<<<<<< HEAD
         this.additionStubs.ytdtotal[index] = this.round(Number(this.additionStubsAdvance.payytd[index]) +
             Number(this.additionStubsAdvance.overtimeytd[index]) +
             Number(this.additionStubsAdvance.holidayytd[index]) +
@@ -1787,13 +2191,29 @@ Stubs.prototype.countValueForYtdTotal = function(index, period) {
             Number(this.additionStubsAdvance.customField2ytd[index]) +
             Number(this.additionStubsAdvance.customField3ytd[index]) +
             Number(this.additionStubsAdvance.customField4ytd[index])
+=======
+        this.additionStubs.ytdtotal[index] = this.round(Number(this.additionStubsAdvance.payytd[index])
+            + Number(this.additionStubsAdvance.overtimeytd[index])
+            + Number(this.additionStubsAdvance.holidayytd[index])
+            + Number(this.additionStubsAdvance.vacationytd[index])
+            + Number(this.additionStubsAdvance.bonusytd[index])
+            + Number(this.additionStubsAdvance.floatytd[index])
+            + Number(this.additionStubsAdvance.customField1ytd[index])
+            + Number(this.additionStubsAdvance.customField2ytd[index])
+            + Number(this.additionStubsAdvance.customField3ytd[index])
+            + Number(this.additionStubsAdvance.customField4ytd[index])
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
         );
     } else {
         this.additionStubs.ytdtotal[index] = this.round(Number(this.additionStubs.total[index]) * Number(period));
     }
 };
 
+<<<<<<< HEAD
 Stubs.prototype.calculateYTDTotal = function(index) {
+=======
+Stubs.prototype.calculateYTDTotal = function (index) {
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
     index = index || false;
     var periodAmount = this.countPeriodAmount(index);
     if (periodAmount) {
@@ -1819,6 +2239,7 @@ Stubs.prototype.calculateYTDTotal = function(index) {
                         this.additionStubsAdvance[aField + 'ytd'][index] = this.round(Number(this.additionStubsAdvance[aField + 'ytd'][prewStubIndex]) + Number(this.currentAdvance[aField].this));
                     }
                 }
+<<<<<<< HEAD
                 this.additionStubs.ytdtotal[index] = this.round(Number(this.additionStubsAdvance.payytd[index]) +
                     Number(this.additionStubsAdvance.overtimeytd[index]) +
                     Number(this.additionStubsAdvance.holidayytd[index]) +
@@ -1829,6 +2250,18 @@ Stubs.prototype.calculateYTDTotal = function(index) {
                     Number(this.additionStubsAdvance.customField2ytd[index]) +
                     Number(this.additionStubsAdvance.customField3ytd[index]) +
                     Number(this.additionStubsAdvance.customField4ytd[index])
+=======
+                this.additionStubs.ytdtotal[index] = this.round(Number(this.additionStubsAdvance.payytd[index])
+                    + Number(this.additionStubsAdvance.overtimeytd[index])
+                    + Number(this.additionStubsAdvance.holidayytd[index])
+                    + Number(this.additionStubsAdvance.vacationytd[index])
+                    + Number(this.additionStubsAdvance.bonusytd[index])
+                    + Number(this.additionStubsAdvance.floatytd[index])
+                    + Number(this.additionStubsAdvance.customField1ytd[index])
+                    + Number(this.additionStubsAdvance.customField2ytd[index])
+                    + Number(this.additionStubsAdvance.customField3ytd[index])
+                    + Number(this.additionStubsAdvance.customField4ytd[index])
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
                 );
             } else {
                 this.additionStubs.ytdtotal[index] = this.round(Number(this.additionStubs.ytdtotal[prewStubIndex]) + Number(this.additionStubs.total[index]));
@@ -1837,14 +2270,24 @@ Stubs.prototype.calculateYTDTotal = function(index) {
     }
 };
 
+<<<<<<< HEAD
 Stubs.prototype.countValueForYtdDeduction = function(index, period) {
+=======
+Stubs.prototype.countValueForYtdDeduction = function (index, period) {
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
     this.additionStubs.ytdficafedtax[index] = this.round(Number(this.additionStubs.ficafedtax[index]) * Number(period));
     this.additionStubs.ytdficamedtax[index] = this.round(Number(this.additionStubs.ficamedtax[index]) * Number(period));
     this.additionStubs.ytdficasstax[index] = this.round(Number(this.additionStubs.ficasstax[index]) * Number(period));
     this.additionStubs.ytdsttax[index] = this.round(Number(this.additionStubs.sttax[index]) * Number(period));
+<<<<<<< HEAD
     if (this.current.state.abbr === 'CA') {
         this.additionStubs.ytdcasditax[index] = this.round(Number(this.additionStubs.casditax[index]) * Number(period));
         if (this.additionStubs.ytdcasditax[index] > 939.40) {
+=======
+    if(this.current.state.abbr === 'CA') {
+        this.additionStubs.ytdcasditax[index] = this.round(Number(this.additionStubs.casditax[index]) * Number(period));
+        if(this.additionStubs.ytdcasditax[index] > 939.40) {
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
             this.additionStubs.ytdcasditax[index] = this.round(939.40);
         }
     }
@@ -1857,7 +2300,11 @@ Stubs.prototype.countValueForYtdDeduction = function(index, period) {
             }
             this.currentTaxAdvance[tField].ytd[index] = this.round(Number(this.currentTaxAdvance[tField].rate) * Number(periodYtd));
         }
+<<<<<<< HEAD
     } else {
+=======
+    }else{
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
         var periodYtd
         for (var tField in this.currentTax) {
             periodYtd = period;
@@ -1869,7 +2316,11 @@ Stubs.prototype.countValueForYtdDeduction = function(index, period) {
     }
 };
 
+<<<<<<< HEAD
 Stubs.prototype.calculateDeductionYTD = function(index) {
+=======
+Stubs.prototype.calculateDeductionYTD = function (index) {
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
     index = index || false;
     this.additionStubs.ytdficafedtax[index] = this.round(0);
     this.additionStubs.ytdficamedtax[index] = this.round(0);
@@ -1898,9 +2349,15 @@ Stubs.prototype.calculateDeductionYTD = function(index) {
                 this.additionStubs.ytdficamedtax[index] = this.round(Number(this.additionStubs.ytdficamedtax[prewStubIndex]) + Number(this.additionStubs.ficamedtax[index]));
                 this.additionStubs.ytdficasstax[index] = this.round(Number(this.additionStubs.ytdficasstax[prewStubIndex]) + Number(this.additionStubs.ficasstax[index]));
                 this.additionStubs.ytdsttax[index] = this.round(Number(this.additionStubs.ytdsttax[prewStubIndex]) + Number(this.additionStubs.sttax[index]));
+<<<<<<< HEAD
                 if (this.current.state.abbr === 'CA') {
                     this.additionStubs.ytdcasditax[index] = this.round(Number(this.additionStubs.ytdcasditax[prewStubIndex]) + Number(this.additionStubs.casditax[index]));
                     if (this.additionStubs.ytdcasditax[index] > 939.40) {
+=======
+                if(this.current.state.abbr === 'CA') {
+                    this.additionStubs.ytdcasditax[index] = this.round(Number(this.additionStubs.ytdcasditax[prewStubIndex]) + Number(this.additionStubs.casditax[index]));
+                    if(this.additionStubs.ytdcasditax[index] > 939.40) {
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
                         this.additionStubs.ytdcasditax[index] = this.round(939.40);
                     }
                 }
@@ -1912,7 +2369,11 @@ Stubs.prototype.calculateDeductionYTD = function(index) {
                             this.currentTaxAdvance[tField].ytd[index] = this.round(Number(this.currentTaxAdvance[tField].ytd[prewStubIndex]) + Number(this.currentTaxAdvance[tField].rate));
                         }
                     }
+<<<<<<< HEAD
                 } else {
+=======
+                }else{
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
                     for (var tField in this.currentTax) {
                         if (Number(this.currentTax[tField].period)) {
                             this.currentTax[tField].ytd[index] = this.round(Number(this.currentTax[tField].rate) * Number(this.currentTax[tField].period));
@@ -1923,6 +2384,7 @@ Stubs.prototype.calculateDeductionYTD = function(index) {
                 }
             }
         }
+<<<<<<< HEAD
         this.additionStubs.ytddeductions[index] = this.round(Number(this.additionStubs.ytdficamedtax[index]) +
             Number(this.additionStubs.ytdficasstax[index]) +
             Number(this.additionStubs.ytdficafedtax[index]) +
@@ -1933,11 +2395,27 @@ Stubs.prototype.calculateDeductionYTD = function(index) {
             Number(this.currentTaxAdvance.childsup.ytd[index]) +
             Number(this.currentTaxAdvance.optional.ytd[index]) +
             Number(this.currentTax.deductionother.ytd[index])
+=======
+        this.additionStubs.ytddeductions[index] = this.round(Number(this.additionStubs.ytdficamedtax[index])
+            + Number(this.additionStubs.ytdficasstax[index])
+            + Number(this.additionStubs.ytdficafedtax[index])
+            + Number(this.additionStubs.ytdsttax[index])
+            + Number(this.additionStubs.ytdcasditax[index])
+            + Number(this.currentTaxAdvance.medical.ytd[index])
+            + Number(this.currentTaxAdvance.retire.ytd[index])
+            + Number(this.currentTaxAdvance.childsup.ytd[index])
+            + Number(this.currentTaxAdvance.optional.ytd[index])
+            + Number(this.currentTax.deductionother.ytd[index])
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
         );
     }
 };
 
+<<<<<<< HEAD
 Stubs.prototype.calculateDeductionYTD2 = function(index) {
+=======
+Stubs.prototype.calculateDeductionYTD2 = function (index) {
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
     index = index || false;
     this.additionStubs.ytdficafedtax[index] = this.round(0);
     this.additionStubs.ytdficamedtax[index] = this.round(0);
@@ -1945,6 +2423,7 @@ Stubs.prototype.calculateDeductionYTD2 = function(index) {
     this.additionStubs.ytdsttax[index] = this.round(0);
     this.additionStubs.ytdcasditax[index] = this.round(0);
     this.additionStubs.ytddeductions[index] = this.round(0);
+<<<<<<< HEAD
     this.additionStubs.ytddeductions[index] = this.round(Number(this.additionStubs.ytdficamedtax[index]) +
         Number(this.additionStubs.ytdficasstax[index]) +
         Number(this.additionStubs.ytdficafedtax[index]) +
@@ -1959,6 +2438,22 @@ Stubs.prototype.calculateDeductionYTD2 = function(index) {
 };
 
 Stubs.prototype.calculateNetpayYTD = function(index) {
+=======
+    this.additionStubs.ytddeductions[index] = this.round(Number(this.additionStubs.ytdficamedtax[index])
+        + Number(this.additionStubs.ytdficasstax[index])
+        + Number(this.additionStubs.ytdficafedtax[index])
+        + Number(this.additionStubs.ytdsttax[index])
+        + Number(this.additionStubs.ytdcasditax[index])
+        + Number(this.currentTaxAdvance.medical.ytd[index])
+        + Number(this.currentTaxAdvance.retire.ytd[index])
+        + Number(this.currentTaxAdvance.childsup.ytd[index])
+        + Number(this.currentTaxAdvance.optional.ytd[index])
+        + Number(this.currentTax.deductionother.ytd[index])
+    );
+};
+
+Stubs.prototype.calculateNetpayYTD = function (index) {
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
     if (this.current.contractor === 0) {
         this.additionStubs.ytdnetpay[index] = this.round(Number(this.additionStubs.ytdtotal[index]) - Number(this.additionStubs.ytddeductions[index]));
     } else {
@@ -1970,7 +2465,11 @@ Stubs.prototype.calculateNetpayYTD = function(index) {
 
 
 
+<<<<<<< HEAD
 Stubs.prototype.refreshFields = function(idRefreshField) {
+=======
+Stubs.prototype.refreshFields = function (idRefreshField) {
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
     idRefreshField = idRefreshField || false;
     this.refreshCurrentStubsFields(idRefreshField);
     this.refreshAdditionStubsFields(idRefreshField);
@@ -1997,7 +2496,11 @@ Stubs.prototype.refreshFields = function(idRefreshField) {
             if ($('#statenamerepide')) {
                 $('#statenamerepide').html(this.current.state.state);
             }
+<<<<<<< HEAD
         } else {
+=======
+        }else {
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
             $('input#statename').val('');
             if ($('#statenamerepide')) {
                 $('#statenamerepide').html('');
@@ -2006,9 +2509,15 @@ Stubs.prototype.refreshFields = function(idRefreshField) {
     }
 };
 
+<<<<<<< HEAD
 Stubs.prototype.refreshAdditionTaxStubsFields = function(idRefreshField) {
     if (this.advanced) {
         for (var aField in this.currentTaxAdvance) {
+=======
+Stubs.prototype.refreshAdditionTaxStubsFields = function (idRefreshField) {
+    if (this.advanced) {
+        for (var aField in this.currentTaxAdvance ) {
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
             if (idRefreshField !== aField + 'rate') {
                 $('#' + aField + 'rate').val(this.currentTaxAdvance[aField].rate);
             }
@@ -2016,8 +2525,13 @@ Stubs.prototype.refreshAdditionTaxStubsFields = function(idRefreshField) {
                 $('#' + aField + 'ytd' + ((i === 1) ? '' : i)).val(this.currentTaxAdvance[aField].ytd[i]);
             }
         }
+<<<<<<< HEAD
     } else {
         for (var aField in this.currentTax) {
+=======
+    }else{
+        for (var aField in this.currentTax ) {
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
             if (idRefreshField !== aField + 'rate') {
                 $('#' + aField + 'rate').val(this.currentTax[aField].rate);
             }
@@ -2028,7 +2542,11 @@ Stubs.prototype.refreshAdditionTaxStubsFields = function(idRefreshField) {
     }
 };
 
+<<<<<<< HEAD
 Stubs.prototype.refreshAdditionStubsFields = function(idRefreshField) {
+=======
+Stubs.prototype.refreshAdditionStubsFields = function (idRefreshField) {
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
     for (var field in this.additionStubs) {
         for (var i = 1; i <= this.maxStubsAmount; i++) {
             if (i <= this.current.stubsAmount) { /*show stubs*/
@@ -2038,7 +2556,11 @@ Stubs.prototype.refreshAdditionStubsFields = function(idRefreshField) {
                         $('#' + field + 'Begin').val(array[0]);
                         $('#' + field + 'End').val(array[1]);
                     }
+<<<<<<< HEAD
                     $('#' + field + ((i === 1) ? '' : i)).val(this.additionStubs[field][i]);
+=======
+                    $('#' + field + ((i === 1) ? '': i)).val(this.additionStubs[field][i]);
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
                 }
             } else { /*hide stubs*/
                 $('#' + field + i).val('');
@@ -2052,12 +2574,21 @@ Stubs.prototype.refreshAdditionStubsFields = function(idRefreshField) {
     }
 };
 
+<<<<<<< HEAD
 Stubs.prototype.refreshAdditionStubsAdvenceFields = function() {
     if (this.advanced) {
         for (var aField in this.additionStubsAdvance) {
             for (var i = 1; i <= this.maxStubsAmount; i++) {
                 if (i <= this.current.stubsAmount) { /*show stubs*/
                     $('#' + aField + ((i === 1) ? '' : i)).val(this.additionStubsAdvance[aField][i]);
+=======
+Stubs.prototype.refreshAdditionStubsAdvenceFields = function () {
+    if (this.advanced) {
+        for (var aField in this.additionStubsAdvance ) {
+            for (var i = 1; i <= this.maxStubsAmount; i++) {
+                if (i <= this.current.stubsAmount) { /*show stubs*/
+                    $('#' + aField + ((i === 1) ? '': i)).val(this.additionStubsAdvance[aField][i]);
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
                 } else { /*hide stubs*/
                     $('#' + aField + i).val('');
                 }
@@ -2071,7 +2602,11 @@ Stubs.prototype.refreshAdditionStubsAdvenceFields = function() {
     }
 };
 
+<<<<<<< HEAD
 Stubs.prototype.refreshCurrentStubsFields = function(idRefreshField) {
+=======
+Stubs.prototype.refreshCurrentStubsFields = function (idRefreshField) {
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
     if (idRefreshField !== 'payrate') {
         $('#payrate').val(this.current.payrate);
     }
@@ -2080,9 +2615,15 @@ Stubs.prototype.refreshCurrentStubsFields = function(idRefreshField) {
     }
 };
 
+<<<<<<< HEAD
 Stubs.prototype.refreshCurrentStubsAdvenceFields = function(idRefreshField) {
     if (this.advanced) {
         for (var aField in this.currentAdvance) {
+=======
+Stubs.prototype.refreshCurrentStubsAdvenceFields = function (idRefreshField) {
+    if (this.advanced) {
+        for (var aField in this.currentAdvance ) {
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
             if (!idRefreshField || idRefreshField !== aField) {
                 $('#' + aField + 'rate').val(this.currentAdvance[aField].rate);
                 $('#' + aField + 'hours').val(this.currentAdvance[aField].hours);
@@ -2093,10 +2634,17 @@ Stubs.prototype.refreshCurrentStubsAdvenceFields = function(idRefreshField) {
 };
 
 //sets
+<<<<<<< HEAD
 Stubs.prototype.setPayHours = function(index, oldPeriod) {
     if ((index !== 'def' && index <= this.current.stubsAmount)) {
         if (this.switchCal) {
             this.additionStubs.payhours[index] = Number(Number(this.additionStubs.payhours[index] / oldPeriod.hourMultiplier) * Number(this.current.period.hourMultiplier)).toFixed(0);
+=======
+Stubs.prototype.setPayHours = function (index, oldPeriod) {
+    if ((index !== 'def' && index <= this.current.stubsAmount)) {
+        if (this.switchCal) {
+            this.additionStubs.payhours[index] = Number(Number(this.additionStubs.payhours[index]/oldPeriod.hourMultiplier) * Number(this.current.period.hourMultiplier)).toFixed(0);
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
         }
     } else if (index === 'def' && this.current.stubsAmount > 1) {
         this.additionStubs.payhours[index] = this.additionStubs.payhours[this.current.stubsAmount];
@@ -2108,22 +2656,37 @@ Stubs.prototype.setPayHours = function(index, oldPeriod) {
     }
 };
 
+<<<<<<< HEAD
 Stubs.prototype.setPayHoursAdvance = function(oldPeriod) {
     if (this.advanced && this.switchCal) {
         for (var aField in this.currentAdvance) {
             this.currentAdvance[aField].hours = this.round((Number(this.currentAdvance[aField].hours) / Number(oldPeriod.hourMultiplier)) * Number(this.current.period.hourMultiplier));
+=======
+Stubs.prototype.setPayHoursAdvance = function (oldPeriod) {
+    if (this.advanced && this.switchCal) {
+        for (var aField in this.currentAdvance) {
+            this.currentAdvance[aField].hours = this.round((Number(this.currentAdvance[aField].hours)/Number(oldPeriod.hourMultiplier)) * Number(this.current.period.hourMultiplier));
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
         }
     }
 };
 
+<<<<<<< HEAD
 Stubs.prototype.setPaymentDate = function(index) {
+=======
+Stubs.prototype.setPaymentDate = function (index) {
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
     if (Number(index) === 1) {
         this.additionStubs.paymentPeriodDate[index] = this.getPaymentDatePeriod(this.additionStubs.paymentDate[index]);
     } else {
         if (this.current.stubsAmount > 1 && (index === 'def' || index <= this.current.stubsAmount)) {
             if (index === 'def') {
                 this.additionStubs.paymentDate[index] = this.getPrewPaymentDate(this.additionStubs.paymentDate[this.current.stubsAmount]);
+<<<<<<< HEAD
             } else if (index <= this.current.stubsAmount) {
+=======
+            } else if (index <= this.current.stubsAmount){
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
                 this.additionStubs.paymentDate[index] = this.getPrewPaymentDate(this.additionStubs.paymentDate[index - 1]);
             }
             this.additionStubs.paymentPeriodDate[index] = this.getPaymentDatePeriod(this.additionStubs.paymentDate[index]);
@@ -2134,28 +2697,46 @@ Stubs.prototype.setPaymentDate = function(index) {
     }
 };
 
+<<<<<<< HEAD
 Stubs.prototype.setAllStubNumber = function(index) {
     if (index <= this.current.stubsAmount) {
         this.additionStubs.stubNumber[index] = Number(this.additionStubs.stubNumber[index - 1]) - (Math.floor((Math.random() * 15) + 1) + 10);
+=======
+Stubs.prototype.setAllStubNumber = function (index) {
+    if (index <= this.current.stubsAmount) {
+        this.additionStubs.stubNumber[index] = Number(this.additionStubs.stubNumber[index - 1]) - (Math.floor((Math.random()*15)+1)+10);
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
     } else {
         this.additionStubs.stubNumber[index] = '';
     }
     $('#stubNumber' + index).val(this.additionStubs.stubNumber[index]);
 };
 
+<<<<<<< HEAD
 Stubs.prototype.switchCalculator = function(value) {
+=======
+Stubs.prototype.switchCalculator = function (value) {
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
     if (value == 'on') {
         value = true;
     } else {
         value = false;
     }
 
+<<<<<<< HEAD
     if (window.location.pathname === '/requests/editstub') {
+=======
+    if(window.location.pathname === '/requests/editstub'){
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
         value = true;
     }
 
     this.switchCal = value;
+<<<<<<< HEAD
     $('.readonly').each(function() {
+=======
+    $('.readonly').each(function () {
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
         $(this).attr('readonly', value);
         $('input#paythis').attr('readonly', value);
     });

@@ -120,7 +120,11 @@ $(function() {
 
             //console.log(itemElement);
 
+<<<<<<< HEAD
             console.log(carusel_preview);
+=======
+            // console.log(carusel_preview);
+>>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
             /*
             //convert carusel_preview to image using htmlcanvas
             console.log("Converting to image ...");
