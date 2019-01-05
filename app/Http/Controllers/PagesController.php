@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use Resources\Js\App;
+use App\Template;
+use App\User;
 use File;
 use Illuminate\Contracts\Filesystem\FileNotFoundException;
-use App\Template;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Resources\Js\App;
 
 class PagesController extends Controller
 {
@@ -140,33 +142,22 @@ class PagesController extends Controller
         return view('pages.order');
     }
 
-    public function selecttpl() {
-        //return view('generateStubs.selecttpl');
-        /*$file = File::get('\resources\views\templates\template1.blade.php');
-        $response = Response::make($file, 200);
-        $response->header('Content-Type', 'text/php; charset=utf-8');
-        return $response;*/
+    public function generateTemplate() {
+        return view('pages.generateStubs');
+    }
 
-        /*return response()->json([
-            "status" => "success",
-            "template" => "[template]"
-        ]);*/
+    public function selecttpl(Request $request) {
 
-        //return view('templates.template1');
-
-        $path = resource_path() . '/views/templates/template5.blade.php';
-
-        if(!File::exists($path)) {
-           return response()->json(['message' => 'Image not found.'], 404);
+        $name = $request->template;
+        //return $RqTpl;
+        $data = Template::where('template_name',$name)->first();
+        if ($data) {
+         return $data->template;           
+        }else{
+            return '';
         }
 
-        $file = File::get($path);
-        $type = File::mimeType($path);
-
-        $response = Response::make($file, 200);
-        $response->header("Content-Type", $type);
-
-            return $response;
+      
     }
 
     public function selectTemplate($id){

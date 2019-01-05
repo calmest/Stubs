@@ -8,7 +8,6 @@ $(document).ready(function(){
         var tmpl = $(this).attr('data-tmpl'); // get tpl name from button.select-tmpl
         console.log(tmpl);
         var prewTmpl = $('input#selected_template').val();
-        console.log(prewTmpl);
         if (prewTmpl.length === 0 || prewTmpl != tmpl) { //check if it's a fresh tmpl
             var divStep2 = $('.tmpl-show');
         console.log(divStep2);
@@ -16,20 +15,19 @@ $(document).ready(function(){
             //console.log($('#carusel_preview').attr('data-tmpl', tmpl));
             divStep2.hide().html('').attr('id', 'tmpl-' + tmpl);
             $('input#selected_template').val(tmpl);
-            var srcimg = 'checkstubinstant';
-            if (tmpl == 'advanced' || tmpl == 'advanced2') {
-                srcimg = 'advanced' + srcimg;
-            } else if (tmpl == 'advanced3') {
-                srcimg = 'advanced3' + srcimg;
-            }
-            $('.stub-price').attr('src', window.location.protocol + '//' + window.location.hostname + '/images/' + srcimg + '.png');
+            // var srcimg = 'checkstubinstant';
+            // if (tmpl == 'advanced' || tmpl == 'advanced2') {
+            //     srcimg = 'advanced' + srcimg;
+            // } else if (tmpl == 'advanced3') {
+            //     srcimg = 'advanced3' + srcimg;
+            // }
+            // $('.stub-price').attr('src', window.location.protocol + '//' + window.location.hostname + '/images/' + srcimg + '.png');
             $.ajax({
                 data: {template: tmpl},
                 url: '/generateStubs/selecttpl',
                 type: 'GET'
             }).done(function(response){
-               // console.log(response);
-                $('.tmpl-show').html(response).show();
+                divStep2.html(response).show();
                 //deactivate loader rotate
                 $('#loader_element').removeClass('active');
             }).fail(function() {
@@ -53,24 +51,13 @@ $(document).ready(function(){
         $('#loader-4step').addClass('active'); //activate loader rotate
         $('.button-next').click(); //switch on next step
         var data1 = $('#stubsForm').serialize(); //get stubs data
-       // var data2 = $('#agree_order_form').serialize(); // get email data
-
-      $.ajaxSetup({
-          headers: {
-              'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-          }
-      });
-
+        var data2 = $('#agree_order_form').serialize(); // get email data
         $.ajax({
-            data: data1,
-
+            data: data1+'&'+data2,
             //url: '/generateStubs/downloadStubs',
             url: '/order/details',
             type: 'POST'
-
-
         }).done(function(response) {
-            console.log(response);
             $('#order_detail').html(response).show();
             $('#loader-4step').removeClass('active'); //deactivate loader rotate
         }).fail(function() {

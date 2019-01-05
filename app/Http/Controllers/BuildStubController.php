@@ -20,6 +20,8 @@ class BuildStubController extends Controller
     	return view('stubs.index', compact('template'));
     }
 
+    
+
     /*
     |---------------------------------------------
     | SHOW STUBS TEMPLATES
@@ -109,13 +111,19 @@ class BuildStubController extends Controller
     |---------------------------------------------
     */
     public function orderDetails(Request $request){
-        $template_name = $request->stubs['template'];
-        $company_name = $request->stubs['header']['companyName'];
-        $template_qty = $request->stubs['header']['stubsAmount'] + 1;
-        $template_total = $template_qty * 8.99;
-        $template = $request->all();
+    $template_name = $request->stubs['template'];
+    $template_qty = $request->stubs['header']['stubsAmount'] + 1;
+    $template_total = $template_qty * 8.99;
 
-       return view('stubs.orders', compact('template_name','template_qty','template_total'));
+
+    $name = $request->template;
+        //return $RqTpl;
+        $data = Template::where('template_name','complete')->first();
+        if ($data) {
+          return view('stubs.complete', compact('template_name','template_qty','template_total'));;           
+        }else{
+            return '';
+        }
     }
 
     public function createOrder(Request $request){

@@ -55,6 +55,8 @@ Route::get('preview',			'BuildStubController@preview');
 
 /***************************
 **/
+Route::get('template', 'PagesController@generateTemplate');
+Route::get('/generateStubs/selecttpl', 'PagesController@selecttpl');
 
 
 Route::get('orders/downloads/{id}', 'OrderController@downloads');
@@ -69,6 +71,7 @@ Route::group(['middleware' => 'App\Http\Middleware\AdminMiddleware'], function()
     Route::get('posts/show', 'PostsController@show');
  });
 Route::post('/order/details',			'BuildStubController@orderDetails');
+Route::post('/generateStubs/createOrder', 'BuildStubController@createOrder');
 Route::post('/createOrder',             'BuildStubController@createOrder');
 Route::post('/payment/stripeCharge',    'BuildStubController@stripeCharge');
 Route::post('/payment',                 'BuildStubController@payment');

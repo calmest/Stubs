@@ -120,7 +120,7 @@ $(function() {
 
             //console.log(itemElement);
 
-            console.log(carusel_preview);
+            // console.log(carusel_preview);
             /*
             //convert carusel_preview to image using htmlcanvas
             console.log("Converting to image ...");
