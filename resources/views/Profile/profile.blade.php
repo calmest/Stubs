@@ -1,32 +1,36 @@
 @extends('layouts.app')
 
 @section('content')
+<div class="header well" style="margin: 0 auto; width: 100%;">
+    <div class="container">
+        <h1>Your Profile</h1>
+    </div>
+</div>
 </br></br>
 <div class="container">
         <div class="row">
             <div class="col-md-3 ">
                  <div class="list-group ">
-                  <a href="/profile/mystubs" class="list-group-item list-group-item-action">My Stubs</a>
-                  <a href="/profile" class="list-group-item list-group-item-action active">Profile</a>
-                  <a href="/profile/company" class="list-group-item list-group-item-action">Company Information</a>
-                  <a href="/profile/employee" class="list-group-item list-group-item-action">Employee Information</a>
-                  <a href="/reviews/create" class="list-group-item list-group-item-action">Reviews</a>
+                    <a href="/profile" class="list-group-item list-group-item-action active">Profile</a>
+                    <a href="/profile/mystubs" class="list-group-item list-group-item-action">My Stubs</a>
+                    <a href="/profile/company" class="list-group-item list-group-item-action">Company Information</a>
+                    <a href="/profile/employee" class="list-group-item list-group-item-action">Employee Information</a>
+                    <a href="/reviews/create" class="list-group-item list-group-item-action">Reviews</a>
 
 
                 </div>
             </div>
             <div class="col-md-9">
                <style>
-                     .panel-default{
-                     padding-right: 3% !important; 
-                     padding-left: 3% !important;
+                    .panel-default{
+                    padding-right: 3% !important;
+                    padding-left: 3% !important;
                     }
                     h1{
-                      color: #428bca;
+                        color: #428bca;
                     }
-                  </style>
+                </style>
                 <div class="panel panel-default " >
-                 
                     <div class="panel-body">
                         <div class="row">
                             <div class="col-md-12">

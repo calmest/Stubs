@@ -2,21 +2,19 @@
 
 namespace App\Http\Controllers;
 
-<<<<<<< HEAD
-use Illuminate\Http\Request;
-use Spatie\Browsershot\Browsershot;
-use App\Template;
-use App\MyStub;
-=======
 use App\MyStub;
 use App\Template;
 use Barryvdh\DomPDF\Facade as PDF;
 use Illuminate\Http\Request;
 use Spatie\Browsershot\Browsershot;
->>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
 
 class BuildStubController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     /*
     |---------------------------------------------
     | SHOW STUB BUILD INDEX
@@ -27,11 +25,8 @@ class BuildStubController extends Controller
     	return view('stubs.index', compact('template'));
     }
 
-<<<<<<< HEAD
-=======
-    
 
->>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
+
     /*
     |---------------------------------------------
     | SHOW STUBS TEMPLATES
@@ -120,59 +115,42 @@ class BuildStubController extends Controller
     | BUILD MY STUB
     |---------------------------------------------
     */
-    public function orderDetails(Request $request){
-<<<<<<< HEAD
-        $template_name = $request->stubs['template'];
-        $template_qty = $request->stubs['header']['stubsAmount'] + 1;
-        $template_total = $template_qty * 8.99;
-        //return $request->all();
-        return view('stubs.orders', compact('template_name','template_qty','template_total'));
+    public function  generatePin($length) {
+       $key = '';
+       $keys = array_merge(range(0, 9));
+      for ($i = 0; $i < $length; $i++) {
+            $key .= $keys[array_rand($keys)];
+        }
+         return $key;
     }
 
-    public function createOrder(Request $request){
-        return $request->all();
-=======
+
+    public function orderDetails(Request $request){
     $template_name = $request->stubs['template'];
     $template_qty = $request->stubs['header']['stubsAmount'] + 1;
+    //$template_depsit o= $request->extend[1];
     $template_total = $template_qty * 8.99;
+    $code = $this->generatePin(6);
 
 
     $name = $request->template;
         //return $RqTpl;
         $data = Template::where('template_name','complete')->first();
         if ($data) {
-          return view('stubs.complete', compact('template_name','template_qty','template_total'));;           
+          return view('stubs.complete', compact('template_name','template_qty','template_total', 'code'));
         }else{
             return '';
         }
     }
 
-    public function createOrder(Request $request){
-        $data = $request->all();
-        $code = '896327';
-        
-        return response()->json($code);
-        //return $data;
->>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
-    }
 
-    public function stripeCharge(Request $request)
-    {
-    	$stripeCharge = $request->token;
-        //return response()->json($stripeCharge);
-       return $stripeCharge;
-       // $order_id = 'reject';
-       // return $order_id;
-    }
 
-<<<<<<< HEAD
-=======
+
     public function preview()
     {
         return view('pages.preview');
     }
 
->>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
     /*
     |---------------------------------------------
     | Generate order and redirect

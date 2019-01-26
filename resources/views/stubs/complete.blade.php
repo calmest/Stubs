@@ -9,6 +9,8 @@
     </tr>
             <tr>
             <td class="grey">
+            <input id="tempName" type="hidden" value="{{ ucfirst($template_name) }} ">
+            <input id="code" type="hidden" value="{{$code}}">
                 {{ ucfirst($template_name) }} Stub-EDownload<br>
                 Item price: $8.99<br>
                 Quantity: {{ ucfirst($template_qty) }}
@@ -38,14 +40,19 @@
                 <form data-paypalpro="" class="form-horizontal" id="agree_order_form" action="/order/details" method="post"><div class="form-group"><label class="col-sm-3 control-label required" for="BillingForm_email">Email <span class="required">*</span></label><div class="col-sm-9"><input style="width:230px;" class="form-control" placeholder="Email" name="BillingForm[email]" id="BillingForm_email" type="email" maxlength="128" value=""><div class="help-block error" id="BillingForm_email_em_" style="display:none"></div><span class="help-block">Your check stubs will be sent to this address.</span></div></div><div class="form-group"><span class="col-sm-3"></span><div class="col-sm-9"><div class="checkbox"><input id="ytBillingForm_agree" type="hidden" value="0" name="BillingForm[agree]"><label><input name="BillingForm[agree]" id="BillingForm_agree" value="1" type="checkbox">I agree with <a href="/site/legal" title="Terms" target="_blank">the terms of service</a><span class="required">*</span></label></div><div class="help-block error" id="BillingForm_agree_em_" style="display:none"></div></div></div><button id="save_order_form" data-stripe="true" class="btn btn-success" name="yt0" type="button">Place Order</button>
 </form>
 <button id="stripe_button" style="display:none;" class="btn btn-success" name="yt1" type="button">Complete Payment</button><script>
+    var tmplCode = $('#code').val();
     var handler = StripeCheckout.configure({
         key: 'pk_test_ppSY5pMjs14nGhpg0RVNHJl4',
         image: '/images/tile-150x150.png',
         locale: 'auto',
         token: function(token) {
             var domain = window.location.protocol + '//' + window.location.hostname;
+            console.log(token);
             $.ajax({
-                data: token,
+                data: {
+                    'token':token,
+                    'template':tmplCode
+                    },
                 url: '/payment/stripeCharge',
                 type: 'POST'
             }).done(function(order_id) {
@@ -60,15 +67,27 @@
                 } else if (order_id == 'error') {
                     toastr.warning('Payment Error');
                     console.log('Error');
-                    /* window.location.replace(domain + '/payment/error') */;
+                   // window.location.replace(domain + '/payment/error');
                 } else {
                     toastr.success('Payment Successful');
                     console.log('Success');
+
+                    $.ajax({
+                        type: 'GET',
+                        // dataType: "json",
+                        url: '/sendmail',
+
+                        success: function (response) {
+
+                            console.log(response);
+                        },
+                    });
                     //window.location.replace(domain + '/payment/success?order_id='+order_id);
                 }
             }).fail(function(response) {
-                //console.log('FAIL', response);
-                window.location.replace(domain + '/payment/error');
+                console.log('FAIL', response);
+                toastr.warning('Payment Error');
+               // window.location.replace(domain + '/payment/error');
             });
             // You can access the token ID with `token.id`.
             // Get the token ID to your server-side code for use.
@@ -78,10 +97,11 @@
     document.getElementById('stripe_button').addEventListener('click', function(e) {
         e.preventDefault();
         var agreeEmail = $(this).attr('data-email').toLowerCase();
+        var amount = $('#stub-amount').val();
         try {
             handler.open({
-                name: 'Real Paycheck Stubs',
-                amount: '899',
+                name: 'Create My Stubs',
+                amount: amount,
                 billingAddress: true,
                 email: agreeEmail
             });
@@ -104,11 +124,29 @@
         var data1 = $('#stubsForm').serialize();
         var data2 = $agreeForm.serialize();
         var email = $agreeForm.find('[name="BillingForm[email]"]').val().toLowerCase();
+        var passName = $('#tempName').val();
+        var generateCode = $('#code').val();
+        var test = $('#carusel_preview').html();
+        var name = {template: test};
+
+        console.log(test);
 
         $orderDetailDiv.find('.form-group').removeClass('has-error');
         $orderDetailDiv.find('.error').html('');
+
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+
+
         $.ajax({
-            data: data1+'&'+data2,
+            data: {
+                'save':name.template,
+                'template_name':passName,
+                'tempCode': generateCode
+                },
             url: '/generateStubs/createOrder',
             type: 'POST'
         }).done(function(response) {
@@ -142,6 +180,8 @@
         }).fail(function(response) {
             alert('error');
         });
+
+
         return false;
     });
 </script>
@@ -165,7 +205,7 @@ if(jQuery.trim(value)!='' && !value.match(/^[a-zA-Z0-9!#$%&'*+\/=?^_`{|}~-]+(?:\
 
 
 if(jQuery.trim(value)!='') {
-    
+
 if(value.length>128) {
     messages.push("Email is too long (maximum is 128 characters).");
 }

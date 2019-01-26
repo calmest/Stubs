@@ -14,7 +14,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-12">
-                            {!! Form::open(['action' => 'PostsController@store', 'method' => 'POST']) !!}
+        {!! Form::open(['action' => 'PostsController@store', 'method' => 'POST']) !!}
         <div class="form-group row">
             {{ Form::label('title', 'Name*', ['class' => 'col-3', 'for' => "name"]) }}
             <div class="col-9">

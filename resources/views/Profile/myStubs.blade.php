@@ -11,15 +11,18 @@
     <div class="row">
         <div class="col-md-3 ">
                 <div class="list-group ">
-                <a href="/profile/mystubs" class="list-group-item list-group-item-action active">My Stubs</a>
                 <a href="/profile" class="list-group-item list-group-item-action">Profile</a>
+                <a href="/profile/mystubs" class="list-group-item list-group-item-action active">My Stubs</a>
                 <a href="/profile/company" class="list-group-item list-group-item-action">Company Information</a>
                 <a href="/profile/employee" class="list-group-item list-group-item-action">Employee Information</a>
-                <a href="/reviews/create" class="list-group-item list-group-item-action">Reviews</a>
-
-
+                <a href="/reviews/create" class="list-group-item list-group-item-action">Post A Review</a>
             </div>
         </div>
+        <style>
+            h1{
+                color: #428bca;
+            }
+        </style>
         <div class="col-md-9">
             <div class="panel panel-default" style="padding-right: 3%; padding-left: 3%;">
                 <div class="panel-body">
@@ -41,6 +44,7 @@
                                     <thead>
                                         <tr>
                                             <th ># Order</th>
+                                            <th>Name</th>
                                             <th>Date</th>
                                             <th>PDFs</th>
                                         </tr>
@@ -49,14 +53,15 @@
 
                                         @if (count ($orders) < 1)
                                             <tr>
-                                                <td colspan="3">No stubs found</td>
+                                                <td colspan="4">No stubs found</td>
                                             </tr>
                                         @else
                                             @foreach ($orders as $order)
                                             <tr>
                                                 <td>{{ $order->id }}</td>
-                                                <td>{{ $order->order_purchased_at }}</td>
-                                                <td ><a href="{{ url('orders/downloads/' . $order->id) }}" class="center btn btn-primary btn-xs">Download Your Stub</a></td>
+                                                <td class="text-captalize">{{ $order->template_name }}</td>
+                                                <td>{{ $order->created_at }}</td>
+                                                <td ><a href="{{ url('orders/downloads/' . $order->download_link.'/'.$order->id) }}" class="center btn btn-primary btn-xs" target="_blank">Download Your Stub</a></td>
                                             </tr>
                                             @endforeach
 

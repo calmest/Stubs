@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'CREATE MY STUBS'),
 
     /*
     |--------------------------------------------------------------------------
@@ -154,6 +154,8 @@ return [
         Collective\Html\HtmlServiceProvider::class,
         Unisharp\Ckeditor\ServiceProvider::class,
         Barryvdh\DomPDF\ServiceProvider::class,
+        Barryvdh\Snappy\ServiceProvider::class,
+        Novanti\LaravelPDF\PDFServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -217,6 +219,9 @@ return [
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
         'PDF' => Barryvdh\DomPDF\Facade::class,
+        'PDF' => Barryvdh\Snappy\Facades\SnappyPdf::class,
+        'SnappyImage' => Barryvdh\Snappy\Facades\SnappyImage::class,
+        'PDF' => Novanti\LaravelPDF\PDFFacade::class,
 
     ],
 

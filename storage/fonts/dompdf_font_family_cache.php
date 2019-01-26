@@ -83,13 +83,10 @@
   'nunito' => array(
     'normal' => $fontDir . '\474f10b76136d401d855594aedc55e83',
   ),
-<<<<<<< HEAD
-=======
   'vt323' => array(
     'normal' => $fontDir . '\4433d5784b2b669422ea40ed9ced3189',
   ),
   'ocraext' => array(
     'normal' => $fontDir . '\91898c7b243199ff87c9e97d8ba18cfb',
   ),
->>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
 ) ?>

@@ -77,11 +77,11 @@
                     </div>
                     <div class="collapse navbar-collapse" id="yii_booster_collapse_yw0">
                         <ul id="yw2" class="nav navbar-nav">
-                                <li class="{{ Request::is('modern') ? 'active' : '' }}"><a href="/modern">Generate Your Stubs</a></li>
-                                <li class="{{ Request::is('resendpaystub') ? 'active' : '' }}"><a href="/resendpaystub">Resend My Stubs</a></li>
-                                <li class="{{ Request::is('contact') ? 'active' : '' }}"><a href="/contact">Contact Us</a></li>
+                                <li class="{{ Request::is('generateStubs') ? 'active' : '' }}"><a href="/generateStubs">Generate Your Stubs</a></li>
+                                <li class="{{ Request::is('posts') ? 'active' : '' }}"><a href="/posts">News</a></li>
                                 <li class="{{ Request::is('faq') ? 'active' : '' }}"><a href="/faq">FAQs</a></li>
                                 <li class="{{ Request::is('support') ? 'active' : '' }}"><a href="/support">Support</a></li>
+                                <li class="{{ Request::is('contact') ? 'active' : '' }}"><a href="/contact">Contact Us</a></li>
                                 <li class="{{ Request::is('reviews') ? 'active' : '' }}"><a href="/reviews">Reviews</a></li>
                         </ul>
 

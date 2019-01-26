@@ -2,13 +2,8 @@
 
 namespace App\Http\Controllers;
 
-<<<<<<< HEAD
-use Illuminate\Http\Request;
-
-=======
 use Barryvdh\DomPDF\PDF;
 use Illuminate\Http\Request;
->>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
 use PDF;
 
 class PDFMakerController extends Controller
@@ -27,11 +22,7 @@ class PDFMakerController extends Controller
             ]
         ];
 
-<<<<<<< HEAD
-        $pdf = PDF::loadView('pdf.classicdownload', $data);
-=======
         $pdf = PDF::loadView('pages.modern', $data);
->>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
 
         return $pdf->download('classic.pdf');
 

@@ -2,13 +2,6 @@
 
 namespace App\Http\Controllers;
 
-<<<<<<< HEAD
-use Illuminate\Http\Request;
-use Resources\Js\App;
-use File;
-use Illuminate\Contracts\Filesystem\FileNotFoundException;
-use App\Template;
-=======
 use App\Template;
 use App\User;
 use File;
@@ -16,7 +9,6 @@ use Illuminate\Contracts\Filesystem\FileNotFoundException;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Resources\Js\App;
->>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
 
 class PagesController extends Controller
 {
@@ -52,21 +44,6 @@ class PagesController extends Controller
         return view('pages.legal');
     }
 
-<<<<<<< HEAD
-    public function test() {
-        return view('pages.test');
-    }
-
-    public function infoTest(Request $request) {
-         $userName = $request->name;
-        $userDes = $request->description;
-
-        return view('pages.info', compact('userName', 'userDes'));
-
-    }
-
-=======
->>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
     public function privacy() {
         return view('pages.privacy');
     }
@@ -76,13 +53,7 @@ class PagesController extends Controller
         return view('pages.support')->with('title', $title);
     }
 
-<<<<<<< HEAD
-    public function profile() {
-        return view('pages.profile');
-    }
-=======
     
->>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
 
     public function stubs() {
         return view('pages.stubs');
@@ -171,35 +142,6 @@ class PagesController extends Controller
         return view('pages.order');
     }
 
-<<<<<<< HEAD
-    public function selecttpl() {
-        //return view('generateStubs.selecttpl');
-        /*$file = File::get('\resources\views\templates\template1.blade.php');
-        $response = Response::make($file, 200);
-        $response->header('Content-Type', 'text/php; charset=utf-8');
-        return $response;*/
-
-        /*return response()->json([
-            "status" => "success",
-            "template" => "[template]"
-        ]);*/
-
-        //return view('templates.template1');
-
-        $path = resource_path() . '/views/templates/template5.blade.php';
-
-        if(!File::exists($path)) {
-           return response()->json(['message' => 'Image not found.'], 404);
-        }
-
-        $file = File::get($path);
-        $type = File::mimeType($path);
-
-        $response = Response::make($file, 200);
-        $response->header("Content-Type", $type);
-
-            return $response;
-=======
     public function generateTemplate() {
         return view('pages.generateStubs');
     }
@@ -216,7 +158,6 @@ class PagesController extends Controller
         }
 
       
->>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
     }
 
     public function selectTemplate($id){

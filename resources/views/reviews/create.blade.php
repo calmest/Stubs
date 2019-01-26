@@ -1,26 +1,28 @@
 @extends('layouts.app')
 
 @section('content')
-<<<<<<< HEAD
-<div class="header well row">
-    <div class="container">
-        <h1>Post A Review</h1>
+<div class="header well">
+        <div class="container">
+            <h1>Your Reviews</h1>
+        </div>
     </div>
-</div>
-=======
->>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
 </br></br>
 <div class="container">
         <div class="row">
             <div class="col-md-3 ">
                  <div class="list-group ">
-                  <a href="/profile/mystubs" class="list-group-item list-group-item-action">My Stubs</a>
-                  <a href="/profile" class="list-group-item list-group-item-action">Profile</a>
-                  <a href="/profile/company" class="list-group-item list-group-item-action">Company Information</a>
-                  <a href="/profile/employee" class="list-group-item list-group-item-action">Employee Information</a>
-                  <a href="/reviews/create" class="list-group-item list-group-item-action active">Reviews</a>
+                    <a href="/profile" class="list-group-item list-group-item-action">Profile</a>
+                    <a href="/profile/mystubs" class="list-group-item list-group-item-action">My Stubs</a>
+                    <a href="/profile/company" class="list-group-item list-group-item-action">Company Information</a>
+                    <a href="/profile/employee" class="list-group-item list-group-item-action">Employee Information</a>
+                    <a href="/reviews/create" class="list-group-item list-group-item-action active">Reviews</a>
                 </div>
             </div>
+            <style>
+                h1{
+                    color: #428bca;
+                }
+            </style>
             <div class="col-md-9">
                 <div class="panel panel-default" style="padding-right: 3%; padding-left: 3%;">
                     <div class="panel-body">

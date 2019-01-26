@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html>
+
+    <style>
+        .prevback {
+            position: relative;
+        }
+    </style>
+
+    <link href="http://stubs.dev/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://stubs.dev/css/bootstrap-yii.css" rel="stylesheet">
+    <link href="http://stubs.dev/css/main.css" rel="stylesheet">
+
+
+    <div class="prevback">
+
+        <style type="text/css">
+    @import url('https://fonts.googleapis.com/css?family=VT323');
+    @font-face {
+        font-family: "OCRAEXT";
+        src: local("OCR A Extended") ,url(/fonts/OCRAEXT.TTF) format('truetype'),url(/fonts/OCRAExtendedRegular.otf) format('opentype');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    #temp {
+        background: url('images/quality/modern3_w.jpg') no-repeat;
+        background-size: 100% 568px;
+        max-width: 1000px;
+        min-width: 918px;
+        font-size: 14px;
+        padding: 16px 0 0 0;
+        color: #0F8DD8;
+    }
+    #temp tr,#temp td, #temp th ,#temp p{
+        margin: 0;
+        padding: 0;
+    }
+        @media (max-width: 979px){
+        .right_head_stub{
+            font-size: 17px !important;
+        }
+    }
+    .clear {clear: both;}
+    .temp_easy {height: 449px;}
+    .temp_ext {height: 568px;}
+    #temp input.require-error[type="text"]{border:2px dashed #a94442;}
+    #temp input[type="text"] {
+        height: 20px;
+        line-height: 20px;
+        border: 1px dashed #333;
+        background: transparent;
+        margin: 1px 0;
+        color: #B55047;
+        font-weight: normal
+    }
+        #stub_wizard .centered-arrow {top:280px;}
+    #stub_wizard #stub_wizard_tab_3 .centered-arrow {top:45%;min-width: 170px;}
+    #extendform {
+        display: none;
+        margin: 3px 2% 0 2%;
+        height: 114px;
+        font-weight: normal;
+        color: #7d7d7d;
+    }
+    #temp .head_stub{
+        margin: 0 2%;
+        height: 45px;
+        /*margin: 0 2% 11px;*/
+        /*height: 60px;*/
+        /*padding: 16px 0 0px;*/
+    }
+    #temp .head_stub table{
+        height: 45px;
+    }
+    #temp .head_stub .left_head_stub input{
+    font-family: 'VT323', monospace;        font-size: 30px;
+        height: 25px;
+        color: #ff0000;
+    }
+    #temp .head_stub .left_head_stub p#stubNumber{
+        display: inline-block;
+    font-family: 'VT323', monospace;        font-size: 30px;
+        height: 25px;
+        color: #ff0000;
+    }
+    #temp .head_stub .left_head_stub{
+        }
+    #temp .head_stub .left_head_stub span:nth-child(1){
+        color: #006699;
+        font-size: 26px;
+    font-family: "OCRAEXT";    }
+    #temp .head_stub .center_head_stub .require{
+        width: 70%;
+        margin: 0 auto;
+    }
+    #temp .head_stub .center_head_stub p#companyName,#temp .head_stub .center_head_stub p#companyAddress1{
+    font-family: 'VT323', monospace;        color: #000000;
+        font-size: 21px;
+        text-align: center;
+    }
+    #temp .head_stub .center_head_stub p#companyAddress1{
+        font-size: 14px;
+    padding-top: 2px;        }
+    #temp .head_stub .center_head_stub input{
+    font-family: 'VT323', monospace;        color: #000000;
+        font-size: 18px;
+        text-align: center;
+    }
+    #temp .head_stub .center_head_stub .require:nth-child(1) input{
+        text-transform: uppercase;
+    }
+    #temp .head_stub .right_head_stub{
+        text-align: left;
+    font-family: "OCRAEXT";        text-transform: uppercase;
+        color: #006699;
+        font-weight: bold;
+        font-size: 18px;
+    vertical-align: bottom;        padding-bottom: 6px;
+    }
+    #temp .stub_top{
+        margin: 10px 2% 0 2.5%;
+        height: 72px;
+    }
+    #temp .left_top_stub{
+        float: left;
+        width: 57.5%;
+        height: 72px;
+    }
+    #temp .left_top_stub_employee_text{
+    font-family: "OCRAEXT";        text-transform: uppercase;
+        font-weight: bold;
+        color: #006699;
+    margin-top: 8px;        font-size: 12px;
+    margin-bottom: 5px;    }
+    #temp .left_top_stub_input input#employeeName,#temp .left_top_stub_input p#employeeName{
+        text-transform: uppercase;
+    }
+    #temp .left_top_stub_input input#employeeName,#temp .left_top_stub_input input#employeeAddress1 {
+        color: #000000;
+        font-size: 16px;
+        height: 20px;
+        border: 1px dashed #333;
+        /*background: transparent;*/
+        font-weight: normal;
+    font-family: 'VT323', monospace;    }
+    #temp .left_top_stub_input p#employeeName,#temp .left_top_stub_input p#employeeAddress1{
+    font-family: 'VT323', monospace;        color: #000000;
+        font-size: 18px;
+        line-height: 18px;
+    }
+    #temp .right_top_stub{
+        float: right;
+        width: 42.5%;
+        height: 72px;
+    }
+    #temp .right_top_stub .right_top_stub_title_snn,
+    #temp .right_top_stub .right_top_stub_title_reportingperiod,
+    #temp .right_top_stub .right_top_stub_title_paydate,
+    #temp .right_top_stub .right_top_stub_title_employee{
+    font-family: "OCRAEXT";        text-align: center;
+        text-transform: uppercase;
+        font-size: 9px;
+        font-weight: bold;
+        height: 19px;
+        vertical-align: middle;
+        color: #006699;
+    padding-top: 3px;    }
+    #temp .right_top_stub .right_top_stub_title_paydate{
+        color: white;
+    }
+    #temp .right_top_stub .right_top_stub_input_ssn,
+    #temp .right_top_stub .right_top_stub_input_reportingperiod,
+    #temp .right_top_stub .right_top_stub_input_paydate,
+    #temp .right_top_stub .right_top_stub_input_title_employee
+    {
+        height: 52px;
+        vertical-align: top;
+    }
+    #temp .right_top_stub .right_top_stub_input_ssn input,
+    #temp .right_top_stub .right_top_stub_input_reportingperiod input,
+    #temp .right_top_stub .right_top_stub_input_paydate input,
+    #temp .right_top_stub .right_top_stub_input_title_employee input
+    {
+    font-family: 'VT323', monospace;        font-size: 14px;
+        color: #000000;
+        margin-left: 5px;
+        margin-top: 5px;
+    }
+    #temp .right_top_stub .right_top_stub_input_ssn p#ssn,
+    #temp .right_top_stub .right_top_stub_input_reportingperiod p#paymentPeriodDate,
+    #temp .right_top_stub .right_top_stub_input_paydate p#paymentDate,
+    #temp .right_top_stub .right_top_stub_input_title_employee p#employeeId{
+    font-family: 'VT323', monospace;    >font-size: 14px;        color: #000000;
+        text-align: center;
+    padding-top: 5px;    }
+    #temp .right_top_stub .right_top_stub_input_reportingperiod p#paymentPeriodDate{
+        }
+    #temp .stub_body .left_stub_body{
+        float: left;
+        width: 57.8%;
+        /*height: 246px;*/
+        height: 230px;
+    }
+    #temp .stub_body .right_stub_body{
+        float: right;
+        width: 42.2%;
+        /*height: 246px;*/
+        height: 230px;
+    }
+    #temp .stub_body{
+        margin: 0 2%;
+        /*height: 246px;*/
+        height: 230px;
+        position: relative;
+    }
+    #temp .stub_body .left_stub_body .left_stub_body_title_income,
+    #temp .stub_body .left_stub_body .left_stub_body_title_rate,
+    #temp .stub_body .left_stub_body .left_stub_body_title_hrs,
+    #temp .stub_body .left_stub_body .left_stub_body_title_current_pay{
+    font-family: "OCRAEXT";        color: #fff;
+        font-size: 14px;
+        text-transform: uppercase;
+        font-weight: bold;
+        height: 22px;
+
+    }
+    #temp .stub_body .left_stub_body .left_stub_body_title_rate,
+    #temp .stub_body .left_stub_body .left_stub_body_title_hrs,
+    #temp .stub_body .left_stub_body .left_stub_body_title_current_pay{
+        text-align: center;
+    }
+    #temp .stub_body .left_stub_body .left_stub_body_title_income{
+        padding-left: 4px;
+    }
+    #temp .left_stub_body_pay_inform_text{
+        color: #000000;
+        text-transform: uppercase;
+        /*font-weight: bold;*/
+        font-size: 18px;
+    font-family: 'VT323', monospace;        padding-left: 5px;
+    padding-top: 2px;        vertical-align: top;
+    }
+    #temp .left_stub_body_pay_inform_payrate,
+    #temp .left_stub_body_pay_inform_payhours,
+    #temp .left_stub_body_pay_inform_paythis
+    {
+        text-align: center;
+        padding-top: 2px;
+    }
+    #temp .left_stub_body_pay_inform_payrate input,
+    #temp .left_stub_body_pay_inform_payrate p,
+    #temp .payrate_pdf_right,
+    #temp .payrate_pdf_left
+    {
+        margin: 0 6px;
+        color: #000000;
+        text-transform: uppercase;
+        /*font-weight: bold;*/
+        font-size: 18px;
+    font-family: 'VT323', monospace;    }
+    #temp .left_stub_body_pay_inform_payhours p,
+    #temp .left_stub_body_pay_inform_payhours input{
+        margin: 0 5px;
+        color: #000000;
+        text-transform: uppercase;
+        /*font-weight: bold;*/
+        font-size: 18px;
+    font-family: 'VT323', monospace;        vertical-align: top;
+    }
+    #temp .left_stub_body_pay_inform_paythis,
+    #temp .left_stub_body_pay_inform_paythis input{
+        margin: 0 5px;
+        color: #000000;
+        text-transform: uppercase;
+        /*font-weight: bold;*/
+        font-size: 18px;
+    font-family: 'VT323', monospace;    }
+    #temp .payrate_pdf_left{
+        float: left;
+        width: 50%;
+        margin: 0;
+    }
+    #temp .payrate_pdf_right{
+        float: right;
+        width: 50%;
+        margin: 0;
+    }
+    #temp .paythis_pdf_left{
+        float: left;
+        width: 52%;
+        margin: 0;
+        text-align: right;
+    }
+    #temp .paythis_pdf_right{
+        float: right;
+        width: 40%;
+        padding-left: 8px;
+        text-align: left;
+    }
+    #temp .stub_body .right_stub_body_title_deductions,
+    #temp .stub_body .right_stub_body_title_totaltax,
+    #temp .stub_body .right_stub_body_title_ytdtotal
+    {
+    font-family: "OCRAEXT";        font-size: 14px;
+        color: #006699;
+        font-weight: bold;
+        height: 22px;
+    }
+    #temp .stub_body .right_stub_body_title_deductions{
+        padding-left: 5px;
+    }
+    #temp .stub_body .right_stub_body_title_totaltax,
+    #temp .stub_body .right_stub_body_title_ytdtotal
+    {
+        text-align: center;
+    }
+    #temp .stub_body .right_stub_body input{
+        border:none;
+        width: 95%;
+    }
+    #temp .stub_body .right_stub_body_statutorydeductions_text{
+    font-family: "OCRAEXT";        font-size: 14px;
+        color: #006699;
+        text-transform: uppercase;
+        font-weight: bold;
+        padding: 5px 0 3px 5px;
+    }
+    #temp .state_tr_hide,
+    #temp .casdi_tr_hide{
+        display: none;
+    }
+    #temp .stub_body .right_stub_body_ficamedicare_text,
+    #temp .stub_body .right_stub_body_ficasocialsecurity_text,
+    #temp .stub_body .right_stub_body_federaltax_text,
+    #temp .stub_body .right_stub_body_stateTax_text,
+    #temp .stub_body .right_stub_body_california_text,
+    #temp .stub_body .right_stub_body_california_text{
+        text-transform: uppercase;
+        font-size: 12px;
+        color: #006699;
+    font-family: "OCRAEXT";        padding: 0 2px 0 6px;
+        height: 22px;
+    }
+    #temp .stub_body .right_stub_body_ficamedicare_totaltax,
+    #temp .stub_body .right_stub_body_ficasocialsecurity_totaltax,
+    #temp .stub_body .right_stub_body_federaltax_totaltax,
+    #temp .stub_body .right_stub_body_california_totaltax,
+    #temp .stub_body .right_stub_body_stateTax_totaltax{
+        padding: 0 2px 0 3px;
+    font-family: 'VT323', monospace;        font-size: 12px;
+        color: #000000;
+    }
+    #temp .stub_body .right_stub_body_ficamedicare_totaltax input,
+    #temp .stub_body .right_stub_body_ficasocialsecurity_totaltax input,
+    #temp .stub_body .right_stub_body_federaltax_totaltax input,
+    #temp .stub_body .right_stub_body_california_totaltax input,
+    #temp .stub_body .right_stub_body_stateTax_totaltax input,
+    #temp .stub_body .right_stub_body_ficamedicare_totaltax p,
+    #temp .stub_body .right_stub_body_ficasocialsecurity_totaltax p,
+    #temp .stub_body .right_stub_body_federaltax_totaltax p,
+    #temp .stub_body .right_stub_body_california_totaltax p,
+    #temp .stub_body .right_stub_body_stateTax_totaltax p{
+        font-size: 18px;
+        color: #000000;
+    width: 87% !important;    font-family: 'VT323', monospace;        text-align: right;
+    }
+
+    #temp .stub_body .right_stub_body_ficamedicare_ytdtotal input,
+    #temp .stub_body .right_stub_body_ficasocialsecurity_ytdtotal input,
+    #temp .stub_body .right_stub_body_federaltax_ytdtotal input,
+    #temp .stub_body .right_stub_body_california_ytdtotal input,
+    #temp .stub_body .right_stub_body_stateTax_ytdtotal input,
+    #temp .stub_body .right_stub_body_ficamedicare_ytdtotal p,
+    #temp .stub_body .right_stub_body_ficasocialsecurity_ytdtotal p,
+    #temp .stub_body .right_stub_body_federaltax_ytdtotal p,
+    #temp .stub_body .right_stub_body_california_ytdtotal p,
+    #temp .stub_body .right_stub_body_stateTax_ytdtotal p{
+        font-size: 18px;
+        color: #000000;
+    width: 84% !important;    font-family: 'VT323', monospace;        text-align: right;
+    }
+    #temp .totaltax_pdf_left{
+        float: left;
+        width: 65%;
+        text-align: right;
+        font-size: 18px;
+    font-family: 'VT323', monospace;        color: #000000;
+    }
+    .ytdtotal_pdf_left{
+        float: left;
+        width: 63%;
+        text-align: right;
+        font-size: 18px;
+    font-family: 'VT323', monospace;        color: #000000;
+    }
+    #temp .totaltax_pdf_right{
+        float: right;
+        width: 26%;
+        text-align: left;
+        font-size: 18px;
+    font-family: 'VT323', monospace;        color: #000000;
+    }
+    #temp .ytdtotal_pdf_right{
+        float: right;
+        width: 27%;
+        text-align: left;
+        font-size: 18px;
+    font-family: 'VT323', monospace;        color: #000000;
+    }
+    #ext2abbreviation{
+        position: absolute;
+        color: #b3bfc5;
+        font-size: 38px;
+        top: 105px;
+        left: 167px;
+        font-family: "OCRAEXT";    }
+    #temp .stub_total{
+        margin: 0 2%;
+        /*height: 47px;*/
+        height: 63px;
+    }
+    #temp .right_stub_total_titel_ytdgross,
+    #temp .right_stub_total_titel_ytdnetpay,
+    #temp .right_stub_total_titel_netpay{
+        color: white;
+    }
+
+    #temp .right_stub_total_titel_ytddeductions,
+    #temp .right_stub_total_titel_total,
+    #temp .right_stub_total_titel_deductions{
+        color: #006699;
+    }
+
+    #temp .right_stub_total_titel_ytdgross,
+    #temp .right_stub_total_titel_ytddeductions,
+    #temp .right_stub_total_titel_ytdnetpay,
+    #temp .right_stub_total_titel_total,
+    #temp .right_stub_total_titel_deductions,
+    #temp .right_stub_total_titel_netpay{
+        text-align: center;
+    font-family: "OCRAEXT";        font-size: 11px;
+        font-weight: bold;
+        height: 22px;
+        vertical-align: middle;
+    }
+    #temp .right_stub_total_value_ytdgross p,
+    #temp .right_stub_total_value_ytddeductions p,
+    #temp .right_stub_total_value_ytdnetpay p,
+    #temp .right_stub_total_value_total p,
+    #temp .right_stub_total_value_deductions p,
+    #temp .right_stub_total_value_netpay p,
+    #temp .right_stub_total_value_ytdgross input,
+    #temp .right_stub_total_value_ytddeductions input,
+    #temp .right_stub_total_value_ytdnetpay input,
+    #temp .right_stub_total_value_total input,
+    #temp .right_stub_total_value_deductions input,
+    #temp .right_stub_total_value_netpay input{
+    font-family: 'VT323', monospace;        color: #000;
+        text-align: center;
+        font-size: 20px;
+        border: none;
+    }
+    #temp .right_stub_total_value_ytdgross,
+    #temp .right_stub_total_value_ytddeductions,
+    #temp .right_stub_total_value_ytdnetpay,
+    #temp .right_stub_total_value_total,
+    #temp .right_stub_total_value_deductions,
+    #temp .right_stub_total_value_netpay{
+        height: 26px;
+    }
+    #temp #extcompanyAddress1{
+        vertical-align: bottom;
+        padding-bottom: 4px;
+        text-align: right;
+        font-size: 12px;
+        padding-right: 5px;
+        padding-left: 5px;
+    font-family: "OCRAEXT";    line-height: 12px;    }
+    #temp #extabbreviation{
+        font-size: 20px;
+        padding-left: 4px;
+        vertical-align: bottom;
+        padding-bottom: 4px;    line-height: 20px;    font-family: "OCRAEXT";    }
+    #temp .extendform_text{
+    font-family: "OCRAEXT";        font-size: 10px;
+        text-align: center;
+        padding-top: 3px;
+        margin-bottom: 16px;
+        color: #006699;
+    }
+    #temp .ext_left {
+        float: left;
+        width: 69%;
+        margin: 0px 0 0 0;
+        height: 84px;
+    padding: 27px 0px 0 12px;    }
+    #temp .ext_left table {
+        width: 100%;
+    }
+    #temp .ext_left_payinform_text{
+    font-family: "OCRAEXT";        color: #fff;
+        padding-left: 8px;
+        font-size: 14px;
+        height: 20px;
+        width: 18%;
+        font-weight: bold;
+    }
+    #temp .ext_right {
+        float: right;
+        width: 25.3%;
+        margin-left: 3%;
+        margin-right: 2.5%;
+    margin-top: 0.5%;    }
+    #temp .ext_left_payinform_paytext{
+        padding-left: 15px;
+    font-family: 'VT323', monospace;        color: #000;
+        font-size: 18px;
+    }
+    #temp .extendform_text_whom_left{
+    font-family: "OCRAEXT";        text-transform: uppercase;
+        font-size: 10px;
+        padding-left: 9px;
+    padding-top: 7px;        color: #165C94;
+        vertical-align: top;
+    }
+    #temp .extendform_text_whom_right{
+        font-size: 12px;
+        color: #201600;
+    font-family: 'VT323', monospace;    padding-top: 7px;        height: 31px;
+    }
+    #temp .extendform_text_whom_right #extemployeeName{
+        text-transform: uppercase;
+        }
+    #temp .ext_left_checkdate_text,
+    #temp .ext_right_checknumber_text{
+    font-family: "OCRAEXT";        text-transform: uppercase;
+        font-size: 11px;
+        color: #006699;
+    padding-top: 4px;        font-weight: bold;
+        text-align: center;
+        /*height: 12px;*/
+    }
+    #temp .ext_right_checknumber_numb .ext_div,#temp .ext_left_checkdate_date .ext_div{
+    font-family: 'VT323', monospace;        color: #000;
+        text-align: center;
+    padding-top: 2px;        height: 14px;
+        font-size: 14px;
+        vertical-align: top;
+        }
+    #temp .text_check {
+        color: #006699;
+        font-weight: normal;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 8px;
+    font-family: "OCRAEXT";    padding-top: 3px;    }
+    #temp .text_non {
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 12px;
+    font-family: "OCRAEXT";        color: #999999;
+    padding-top: 2px;        vertical-align: top;
+        height: 14px;
+            line-height: 11px;
+    }
+    #temp .text_direct {
+        color: #006699;
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: bold;
+        font-size: 17px;
+        height: 16px;
+    font-family: OCRAEXT;        padding-top: 2px;
+            }
+    }
+    #temp .require input[type="text"], #temp .require textarea {
+        width: 100%;
+        background: rgba(255, 200, 79, 0.38);
+    }
+</style>
+        <div class="temp_easy" id="temp" style="width: 1000px; transform: scale(0.77); transform-origin: left top 0px;">
+
+            <div class="head_stub">
+                <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                    <tbody><tr>
+                        <td class="left_head_stub" width="21%">
+                                                            <span>SEQ:</span> <p id="stubNumber">10015</p>
+                                                    </td>
+                        <td class="center_head_stub" width="58%">
+                                                            <p id="companyName">Type Company Name Here</p>
+                                <p id="companyAddress1">Type Company Street Address Here</p>
+                                                    </td>
+                        <td class="right_head_stub" width="21%">
+                            <span class="earn_statement">Earnings Statement</span>
+                        </td>
+                    </tr>
+                </tbody></table>
+            </div>
+
+            <div class="stub_top">
+                <div class="left_top_stub">
+                    <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                        <tbody><tr>
+                            <td>
+                                <div class="left_top_stub_employee_text">
+                                                                            <span class="employee_word">Employee</span>
+                                                                        name / address
+                                </div>
+                                <div class="left_top_stub_input">
+                                                                            <p id="employeeName">Type Employee Name Here</p>
+                                        <p id="employeeAddress1">Type Employee Street Address Here</p>
+                                                                    </div>
+                            </td>
+                        </tr>
+                    </tbody></table>
+                </div>
+                <div class="right_top_stub">
+                    <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                        <tbody><tr>
+                            <td class="right_top_stub_title_snn" width="26.5%">ssn</td>
+                            <td class="right_top_stub_title_reportingperiod" width="29%">reporting period</td>
+                            <td class="right_top_stub_title_paydate" width="25%">pay date</td>
+                            <td class="right_top_stub_title_employee" width="">
+                                                                    <span class="employee_word">employee</span>
+                                                                id
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="right_top_stub_input_ssn">
+                                                                    <p id="ssn">XXX-XX-1234</p>
+                                                            </td>
+                            <td class="right_top_stub_input_reportingperiod">
+                                                                    <p id="paymentPeriodDate">01/04/2019 - 01/10/2019</p>
+                                                            </td>
+                            <td class="right_top_stub_input_paydate">
+                                                                    <p id="paymentDate">01/12/2019</p>
+                                                            </td>
+                            <td class="right_top_stub_input_title_employee">
+                                                                    <p id="employeeId">123</p>
+                                                            </td>
+                        </tr>
+                    </tbody></table>
+                </div>
+                <div class="clear"></div>
+            </div>
+
+            <div class="stub_body">
+                <div id="ext2abbreviation" class="ext_div" data-old=""></div>
+                <div class="left_stub_body">
+                    <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                        <tbody><tr>
+                            <td class="left_stub_body_title_income" width="61.8%">INCOME</td>
+                            <td class="left_stub_body_title_rate" width="10.7%">RATE</td>
+                            <td class="left_stub_body_title_hrs" width="8.5%">HRS</td>
+                            <td class="left_stub_body_title_current_pay" width="19%">CURRENT PAY</td>
+                        </tr>
+                        <tr>
+                            <td class="left_stub_body_pay_inform_text">Gross Earnings</td>
+                            <td class="left_stub_body_pay_inform_payrate">
+                                                                    <p id="payrate" style="text-align: center;">11.47</p>
+                                                            </td>
+                            <td class="left_stub_body_pay_inform_payhours">
+                                                                    <p class="line-up" id="payhours" style="text-align: center;">40</p>
+                                                            </td>
+                            <td class="left_stub_body_pay_inform_paythis">
+                                                                    <p class="readonly" id="paythis" style="text-align: center;">458.80</p>
+                                                            </td>
+                        </tr>
+                    </tbody></table>
+                </div>
+
+                <div class="right_stub_body">
+                    <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                        <tbody><tr>
+                            <td class="right_stub_body_title_deductions" width="49%">DEDUCTIONS</td>
+                            <td class="right_stub_body_title_totaltax" width="24%">TOTAL TAX</td>
+                            <td class="right_stub_body_title_ytdtotal" width="24%">YTD TOTAL</td>
+                        </tr>
+                        <tr>
+                            <td class="right_stub_body_statutorydeductions_text">Statutory Deductions</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="right_stub_body_ficamedicare_text">Fica - Medicare</td>
+                                                            <td class="right_stub_body_ficamedicare_totaltax">
+                                    <p class="line-up" id="ficamedtax">6.65</p>
+                                </td>
+                                <td class="right_stub_body_ficamedicare_ytdtotal">
+                                    <p class="line-up" id="ytdficamedtax">13.30</p>
+                                </td>
+                                                    </tr>
+                        <tr>
+                            <td class="right_stub_body_ficasocialsecurity_text">Fica - Social Security</td>
+                                                            <td class="right_stub_body_ficasocialsecurity_totaltax">
+                                    <p class="line-up" id="ficasstax">28.45</p>
+                                </td>
+                                <td class="right_stub_body_ficasocialsecurity_ytdtotal">
+                                    <p class="line-up" id="ytdficasstax">56.90</p>
+                                </td>
+                                                    </tr>
+                        <tr>
+                            <td class="right_stub_body_federaltax_text">Federal Tax</td>
+                                                            <td class="right_stub_body_federaltax_totaltax">
+                                    <p class="line-up" id="ficafedtax">53.92</p>
+                                </td>
+                                <td class="right_stub_body_federaltax_ytdtotal">
+                                    <p class="line-up" id="ytdficafedtax">107.84</p>
+                                </td>
+                                                    </tr>
+                                                    <tr class="state_tr state_tr_hide">
+                                <input type="hidden" name="stubs[header][stateTax]" id="abbrState">
+                                <td class="right_stub_body_stateTax_text">State Tax W/H</td>
+                                <td class="right_stub_body_stateTax_totaltax"><p class="line-up" id="sttax">0.00</p></td>
+                                <td class="right_stub_body_stateTax_ytdtotal"><p class="line-up" id="ytdsttax">0.00</p></td>
+                            </tr>
+
+                            <tr class="casdi_tr casdi_tr_hide">
+                                <td class="right_stub_body_california_text">California SDI Tax</td>
+                                <td class="right_stub_body_california_totaltax"><p class="line-up" id="casditax">0.00</p></td>
+                                <td class="right_stub_body_california_ytdtotal"><p class="line-up" id="ytdcasditax">0.00</p></td>
+                            </tr>
+                                            </tbody></table>
+                </div>
+            </div>
+
+            <div class="stub_total">
+                <div style="float: left;width: 35.7%;height: 63px;">
+                    <table style="height: 63px;" width="100%" cellspacing="0" cellpadding="0" border="0">
+                        <tbody>
+                        <tr>
+                            <td id="extabbreviation" class="ext_div" data-old="
+                                                            " width="52%">
+                                                            </td>
+                            <td style="" id="extcompanyAddress1" class="ext_div" data-old="Type Company Street Address Here" width="48%">Type Company Street Address Here</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div style="float: right;height: 63px;width: 64.2%;padding-top: 16px;">
+                    <table style="height: 47px;" width="100%" cellspacing="0" cellpadding="0" border="0">
+                        <tbody>
+                        <tr>
+                            <td class="right_stub_total_titel_ytdgross" width="17.5%" height="19px">YTD GROSS</td>
+                            <td class="right_stub_total_titel_ytddeductions" width="17%" height="19px">YTD DEDUCTIONS</td>
+                            <td class="right_stub_total_titel_ytdnetpay" width="17%" height="19px">YTD NET PAY</td>
+                            <td class="right_stub_total_titel_total" width="16.5%" height="19px">TOTAL</td>
+                            <td class="right_stub_total_titel_deductions" width="16%" height="19px">DEDUCTIONS</td>
+                            <td class="right_stub_total_titel_netpay" height="19px">NET PAY</td>
+                        </tr>
+                        <tr>
+                                                            <td class="right_stub_total_value_ytdgross"><p class="readonly" id="ytdtotal">917.60</p></td>
+                                <td class="right_stub_total_value_ytddeductions"><p class="readonly" id="ytddeductions">178.04</p></td>
+                                <td class="right_stub_total_value_ytdnetpay"><p class="readonly" id="ytdnetpay">739.56</p></td>
+                                <td class="right_stub_total_value_total"><p class="readonly" id="total">458.80</p></td>
+                                <td class="right_stub_total_value_deductions"><p class="readonly" id="deductions">89.02</p></td>
+                                <td class="right_stub_total_value_netpay"><p class="readonly" id="netpay">369.78</p></td>
+                                                    </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="clear"></div>
+            </div>
+
+
+
+
+
+            <div id="extendform">
+                <div class="extendform_text">STATEMENT OF EARNINGS AND DEDUCTIONS • DETACH AND KEEP FOR YOUR RECORDS</div>
+                <div class="ext_left">
+                    <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                        <tbody>
+                        <tr>
+                            <td class="ext_left_payinform_text">PAY</td>
+                            <td class="ext_left_payinform_paytext" id="extpay">
+                                                                    **<span id="extdollars">369</span>** DOLLARS AND **<span id="extcents">78</span>** CENTS
+                                                            </td>
+                        </tr>
+                        <tr>
+                            <td class="extendform_text_whom_left">To the order of:</td>
+                            <td class="extendform_text_whom_right">
+                                <div id="extemployeeName" class="ext_div" data-old="Type Employee Name Here">Type Employee Name Here</div>
+                                <div id="extemployeeAddress1" class="ext_div" data-old="Type Employee Street Address Here">Type Employee Street Address Here</div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="ext_right">
+                    <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                        <tbody>
+                        <tr>
+                            <td class="ext_left_checkdate_text" width="50%">Check Date</td>
+                            <td class="ext_right_checknumber_text" width="50%">Check Number</td>
+                        </tr>
+                        <tr>
+                            <td class="ext_left_checkdate_date">
+                                <div class="ext_div" id="extpaymentDate" data-old="
+                                    01/04/2019                                ">
+                                    01/04/2019                                </div>
+                            </td>
+                            <td class="ext_right_checknumber_numb">
+                                <div class="ext_div" id="extstubNumber" data-old="10015">10015</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="text_check">THIS IS NOT A CHECK</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="text_non">Non Negotiable</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="text_direct">VOID</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+    </div>
+
+
+</html>

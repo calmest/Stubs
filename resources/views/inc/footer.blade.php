@@ -1,26 +1,26 @@
-<<<<<<< HEAD
 
-<style type="text/css" media="screen">
-
-
-</style>
-<footer>
-    <hr>
-=======
 <hr>
->>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c
 <div class="container">
     <div class="row">
+        @foreach(\App\Review::latest()->take(3)->get() as $reviews)
+            <div class="col-md-4 push" style="padding: 0% 5% 0% 2%;">
+                <div class="row" style="color: #157EE9; font-size: 16px;">
+                    <strong><u>{{ $reviews->name }}</u></strong>
+                </div>
+                <div class="row" style="text-align: justify;">
+                    {{ $reviews->body }}
+                </div>
+                <input type="text" value="{{$reviews->ratings}}" id="userRatings{{$reviews->ratings}}" name="ratingme" disabled="on" /><br>
+                <script>
+                    $(function(){
+                            $('[id^=userRatings]').each(function() {
 
-        <div class="col-md-4">
-            <h3>REVIEWS WILL BE HERE</h3>
-        </div>
-        <div class="col-md-4">
-            <h3>REVIEWS WILL BE HERE</h3>
-        </div>
-        <div class="col-md-4">
-            <h3>REVIEWS WILL BE HERE</h3>
-        </div>
+                                $(this).rating();
+                            });
+                    });
+                </script>
+            </div>
+    @endforeach
     </div>
     <hr>
     <div class="container">
@@ -240,7 +240,3 @@ jQuery('#1152 > input').rating({'readOnly':true});
                 <td class=" ui-datepicker-other-month " data-handler="selectDay" data-event="click" data-month="9" data-year="2018"><a class="ui-state-default ui-priority-secondary" href="#">31</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="10" data-year="2018"><a class="ui-state-default" href="#">1</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="10" data-year="2018"><a class="ui-state-default" href="#">2</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="10" data-year="2018"><a class="ui-state-default" href="#">3</a></td></tr><tr><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="10" data-year="2018"><a class="ui-state-default" href="#">4</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="10" data-year="2018"><a class="ui-state-default" href="#">5</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="10" data-year="2018"><a class="ui-state-default" href="#">6</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="10" data-year="2018"><a class="ui-state-default" href="#">7</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="10" data-year="2018"><a class="ui-state-default" href="#">8</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="10" data-year="2018"><a class="ui-state-default" href="#">9</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="10" data-year="2018"><a class="ui-state-default" href="#">10</a></td></tr><tr><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="10" data-year="2018"><a class="ui-state-default" href="#">11</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="10" data-year="2018"><a class="ui-state-default" href="#">12</a></td><td class="  ui-datepicker-current-day" data-handler="selectDay" data-event="click" data-month="10" data-year="2018"><a class="ui-state-default ui-state-active" href="#">13</a></td><td class="  ui-datepicker-today" data-handler="selectDay" data-event="click" data-month="10" data-year="2018"><a class="ui-state-default ui-state-highlight" href="#">14</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="10" data-year="2018"><a class="ui-state-default" href="#">15</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="10" data-year="2018"><a class="ui-state-default" href="#">16</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="10" data-year="2018"><a class="ui-state-default" href="#">17</a></td></tr><tr><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="10" data-year="2018"><a class="ui-state-default" href="#">18</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="10" data-year="2018"><a class="ui-state-default" href="#">19</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="10" data-year="2018"><a class="ui-state-default" href="#">20</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="10" data-year="2018"><a class="ui-state-default" href="#">21</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="10" data-year="2018"><a class="ui-state-default" href="#">22</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="10" data-year="2018"><a class="ui-state-default" href="#">23</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="10" data-year="2018"><a class="ui-state-default" href="#">24</a></td></tr><tr><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="10" data-year="2018"><a class="ui-state-default" href="#">25</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="10" data-year="2018"><a class="ui-state-default" href="#">26</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="10" data-year="2018"><a class="ui-state-default" href="#">27</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="10" data-year="2018"><a class="ui-state-default" href="#">28</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="10" data-year="2018"><a class="ui-state-default" href="#">29</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="10" data-year="2018"><a class="ui-state-default" href="#">30</a></td><td class=" ui-datepicker-week-end ui-datepicker-other-month " data-handler="selectDay" data-event="click" data-month="11" data-year="2018"><a class="ui-state-default ui-priority-secondary" href="#">1</a></td></tr></tbody></table></div>
 <script src="https://cdn.siftscience.com/s.js"></script><iframe src="https://bid.g.doubleclick.net/xbbe/pixel?d=KAE" style="display: none;"></iframe></body><div id="sideDragRight" style="display: none;"><div class="side_search_box" id="side_google_search" data-allowed-type="text" style="height: 20%; background-image: url(&quot;chrome-extension://aneodkojaglhnkkdbbdnmmmgimlcaogo/images/webSearch.png&quot;); background-color: rgb(255, 255, 255); background-size: cover; background-position: 50% 50%;"></div><div class="side_search_box" id="side_wikipedia_search" data-allowed-type="text" style="height: 20%; background-image: url(&quot;chrome-extension://aneodkojaglhnkkdbbdnmmmgimlcaogo/images/wikipedia.png&quot;); background-color: rgb(255, 255, 255); background-size: cover; background-position: 50% 50%;"></div><div class="side_search_box" id="side_youtube_search" data-allowed-type="text" style="height: 20%; background-image: url(&quot;chrome-extension://aneodkojaglhnkkdbbdnmmmgimlcaogo/images/youtube.png&quot;); background-color: rgb(255, 255, 255); background-size: cover; background-position: 50% 50%;"></div><div class="side_search_box" id="side_translate_search" data-allowed-type="text" style="height: 20%; background-image: url(&quot;chrome-extension://aneodkojaglhnkkdbbdnmmmgimlcaogo/images/translate.png&quot;); background-color: rgb(255, 255, 255); background-size: cover; background-position: 50% 50%;"></div><div class="side_search_box" id="side_image_search" data-allowed-type="all" style="height: 20%; background-image: url(&quot;chrome-extension://aneodkojaglhnkkdbbdnmmmgimlcaogo/images/imageSearch.png&quot;); background-color: rgb(255, 255, 255); background-size: cover; background-position: 50% 50%;"></div></div><div id="sideDragLeft" style="display: none;"><div class="side_search_box" id="side_facebook" data-allowed-type="images" style="height: 20%; background-image: url(&quot;chrome-extension://aneodkojaglhnkkdbbdnmmmgimlcaogo/images/facebook.png&quot;); background-color: rgb(255, 255, 255); background-size: cover; background-position: 50% 50%;"></div><div class="side_search_box" id="side_twitter" data-allowed-type="images" style="height: 20%; background-image: url(&quot;chrome-extension://aneodkojaglhnkkdbbdnmmmgimlcaogo/images/twitter.png&quot;); background-color: rgb(255, 255, 255); background-size: cover; background-position: 50% 50%;"></div><div class="side_search_box" id="side_googleplus" data-allowed-type="images" style="height: 20%; background-image: url(&quot;chrome-extension://aneodkojaglhnkkdbbdnmmmgimlcaogo/images/google+.png&quot;); background-color: rgb(255, 255, 255); background-size: cover; background-position: 50% 50%;"></div><div class="side_search_box" id="side_pinterest" data-allowed-type="images" style="height: 20%; background-image: url(&quot;chrome-extension://aneodkojaglhnkkdbbdnmmmgimlcaogo/images/pinterest.png&quot;); background-color: rgb(255, 255, 255); background-size: cover; background-position: 50% 50%;"></div><div class="side_search_box" id="side_linkedin" data-allowed-type="images" style="height: 20%; background-image: url(&quot;chrome-extension://aneodkojaglhnkkdbbdnmmmgimlcaogo/images/linkedin.png&quot;); background-color: rgb(255, 255, 255); background-size: cover; background-position: 50% 50%;">
 </div></div>
-<<<<<<< HEAD
-</footer>
-=======
->>>>>>> ed75deee1d00f1e7a470b5865c2dba54ce43d03c

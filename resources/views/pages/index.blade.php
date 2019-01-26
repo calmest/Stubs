@@ -7,7 +7,7 @@
     <div class="top-text">
         <h1>Instantly Generate Create My Stubs</h1>
         <p>Our Auto Calculator does all the hard work for you. Give it a try and create your first check stub now! It won't take you long and you can preview your paycheck stub before you purchase.</p>
-        <a href="/modern" class="btn btn-success btn-lg">BUILD CHECK STUB</a>
+        <a href="/generateStubs" class="btn btn-success btn-lg">BUILD CHECK STUB</a>
     </div>
 </div>
 <div class="row">
@@ -36,7 +36,7 @@
                 <div class="clearfix"></div>
             </div>
         </div>
-        <a href="/modern" class="btn btn-success btn-lg launch-btn">LAUNCH GENERATOR</a>
+        <a href="/generateStubs" class="btn btn-success btn-lg launch-btn">LAUNCH GENERATOR</a>
         <div class="clearfix"></div>
     </div>
 </div>
@@ -56,8 +56,8 @@
 
         function goToStubGenerator() {
             window.location.href = "/instant/build/stubs";
-        }   
-        
+        }
+
     </script>
 
 @endsection
